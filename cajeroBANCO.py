@@ -1,3 +1,4 @@
+"""el dinero esta pendiente"""
 dinero=500000
 usuario=str(input("Ingrese su usuario: "))
 contraseña=int(input("Ingrese su contraseña: "))
