@@ -25,3 +25,5 @@ elif (opcion==3):
     else:
         print("Usted no posee tal cantidad de dinero para transferir desde su cuenta")
     print("Gracias por usar y confiar en cajeroEAN")     
+    #hola muchachos aqui les voy a mostrar como hacer un seudocogido bien chimba
+    
