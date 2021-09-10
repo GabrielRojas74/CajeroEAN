@@ -15,15 +15,56 @@ ventanain.config(bd=40, bg="#8A8A8A")
 
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
-"""
+####
+
+
 def validar():
-    usuarios = [["gabriel", 1234, "restaurante",10_000_000], ["ivan", 1213, "banco", 1000]]
+  if entrada1.get() == 'usuario':
+    abrirventana2()
+  else:
+    messagebox.showwarning(
+        "usuario o contraseña no validos", "intente de nuevo")
+
+
+def abrirventana2():
+  ventana.withdraw()
+  win = tk.Toplevel()
+  win.geometry("380x300+1900+100")
+  win.configure(background="white")
+  e3 = tk.Label(win, text="bfhhbejbhf", background="white")
+  e3.pack()
+
+  boton2 = tk.Button(win, text="OKOKOK", command=win.destroy)
+  boton2.pack()
+
+
+def cerrarventana():
+  ventana.destroy()
+
+
+ventana = tk.Tk()
+ventana.title("ventana 1")
+ventana.geometry("600x500")
+ventana.config(bd=40, bg="#8A8A8A")
+
+el = tk.Label(ventana, text="clave:", bg="white", fg="black")
+el.pack
+
+entrada1 = tk.Entry(ventana)
+entrada1.pack()
+
+boton = tk.Button(ventana, text="nueva ventana", command=abrirventana2)
+boton.pack()
+
+boton3 = tk.Button(ventana, text="validar clave", command=validar)
+boton3.pack()
+"""
+ usuarios = [["gabriel", 1234, "restaurante",10_000_000], ["ivan", 1213, "banco", 1000]]
     usuario = cajanombre.get()
     contraseña = cajacontraseña.get()
     for i in usuarios:
         if (i[0] == usuario and i[1] == contraseña):
-
-"""
+ 
 def login():
     ventanain.withdraw()
     login = Toplevel()
@@ -80,7 +121,7 @@ botonsig = Button(ventanain, text='Siguiente', font=("TIMES NEW ROMAN", 12), fg=
 botonsig.pack(padx=20, pady=30)
 
 
-
+"""
 
 
 
