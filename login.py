@@ -35,4 +35,4 @@ while True:
         usuarios.append(usuario)
         print("ha sido registrado")
         print(usuarios)
-#locotas
+#ahora si
