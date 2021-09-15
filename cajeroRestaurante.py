@@ -3,7 +3,7 @@ dinero_de_caja=2_456_850
 
 opcion=int(input(("¿Que desea hacer? Presione 1 para consultar el dinero de la caja, 2 para dar las vueltas al cliente ")))
 if (opcion==1):
-        print("El dinero en la caja es de ",dinero_de_caja)
+        print("La cantidad de dinero que hay en la caja es de ",dinero_de_caja)
         if (dinero_de_caja>=100_000):
             queda=dinero_de_caja//100_000
             print(str(queda)+ "billete\s de 100_000 pesos")
