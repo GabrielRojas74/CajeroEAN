@@ -46,14 +46,12 @@ def login():
       else:
         messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
         
-    
   def abrirventana2():
     ventana.withdraw()
     win = tk.Toplevel()
     win.geometry("600x500")
     win.title("Crear usuario")
     win.configure(bd=40, bg="#8A8A8A")
-
     def guardar_datos():
       win.withdraw()
       entidades= tk.Toplevel()
@@ -62,16 +60,36 @@ def login():
       entidades.configure(bd=40, bg="#8A8A8A")
       loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",  25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       loginto2.pack(pady=20)
-
-      botonbanco = tk.Button(entidades, text="Banco", font=("Arial",  25))
-      botonbanco.pack(pady=10)
-      botonparquea = tk.Button(entidades, text="Parqueadero", font=("Arial",  25))
-      botonparquea.pack(pady=10)
-      botonres = tk.Button(entidades, text="Restaurante", font=("Arial",  25))
-      botonres.pack(pady=10)
-
+      #
       messagebox.showinfo("😁", "Registrado con exito")
-      
+      def banco():
+        entidades.withdraw()
+        banco = tk.Toplevel()
+        banco.geometry("600x500")
+        banco.title("Banco EAN")
+        banco.configure(bd=40, bg="#215DD6")
+
+      def Parqueadero():
+        entidades.withdraw()
+        Parqueadero = tk.Toplevel()
+        Parqueadero.geometry("600x500")
+        Parqueadero.title("Parqueadero EAN")
+        Parqueadero.configure(bd=40, bg="#765048")
+        
+      def restaurante():
+        entidades.withdraw()
+        restaurante = tk.Toplevel()
+        restaurante.geometry("600x500")
+        restaurante.title("Restaurante EAN")
+        restaurante.configure(bd=40, bg="#CD3618")
+        #
+      botonbanco = tk.Button(entidades, text="Banco",font=("Arial",  25), command=banco)
+      botonbanco.pack(pady=10)
+      botonparque = tk.Button(entidades, text="Parqueadero", font=("Arial",  25), command=Parqueadero)
+      botonparque.pack(pady=10)
+      botonres = tk.Button(entidades, text="Restaurante", font=("Arial",  25), command=restaurante)
+      botonres.pack(pady=10)
+        #
     loginto1 = Label(win, text="Complete los datos.", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
     loginto1.pack(pady=20)
     #
@@ -104,9 +122,6 @@ def login():
     boton2 = tk.Button(win, text="crear", command=guardar_datos)
     boton2.pack()   
         
-  
-  
- 
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack()
   botoncrear = tk.Button(ventana, text="Crear usuario", command=abrirventana2)
