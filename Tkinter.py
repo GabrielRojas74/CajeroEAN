@@ -29,11 +29,11 @@ def login():
   loginto.pack(pady=20)
 
   #
-  usuarioc = tk.Label(ventana, text="usuario:", bg="#60A420", fg="black")
+  usuarioc = tk.Label(ventana, text="Usuario:", bg="#60A420", fg="black")
   usuarioc.pack(pady=3, side=tk.TOP)
   entrada1 =tk.Entry(ventana)
   entrada1.pack(pady=7)
-  clavec= tk.Label(ventana, text="clave:", bg="#60A420", fg="black")
+  clavec= tk.Label(ventana, text="Clave:", bg="#60A420", fg="black")
   clavec.pack(pady=3,side=tk.TOP)
   entrada2 = tk.Entry(ventana)
   entrada2.pack(pady=7)
@@ -48,21 +48,69 @@ def login():
         
     
   def abrirventana2():
-    ventanain.withdraw()
+    ventana.withdraw()
     win = tk.Toplevel()
     win.geometry("600x500")
-    win.configure(background="white")
-    e3 = tk.Label(win, text="bfhhbejbhf", background="#60A420")
-    e3.pack()
+    win.title("Crear usuario")
+    win.configure(bd=40, bg="#8A8A8A")
 
-    boton2 = tk.Button(win, text="OKOKOK", command=win.destroy)
-    boton2.pack()
+    def guardar_datos():
+      win.withdraw()
+      entidades= tk.Toplevel()
+      entidades.geometry("600x500")
+      entidades.title("Entidades")
+      entidades.configure(bd=40, bg="#8A8A8A")
+      loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",  25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      loginto2.pack(pady=20)
+
+      botonbanco = tk.Button(entidades, text="Banco", font=("Arial",  25))
+      botonbanco.pack(pady=10)
+      botonparquea = tk.Button(entidades, text="Parqueadero", font=("Arial",  25))
+      botonparquea.pack(pady=10)
+      botonres = tk.Button(entidades, text="Restaurante", font=("Arial",  25))
+      botonres.pack(pady=10)
+
+      messagebox.showinfo("😁", "Registrado con exito")
+      
+    loginto1 = Label(win, text="Complete los datos.", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+    loginto1.pack(pady=20)
+    #
+    usuarionuevo = tk.Label(win, text="Usuario:", bg="#60A420", fg="black")
+    usuarionuevo.pack(pady=3, side=tk.TOP)
+    entradanu = tk.Entry(win)
+    entradanu.pack(pady=7)
+    #
+    clavenu = tk.Label(win, text="Clave:", bg="#60A420", fg="black")
+    clavenu.pack(pady=3, side=tk.TOP)
+    entradanud = tk.Entry(win)
+    entradanud.pack(pady=7)
+    #
+    enti= tk.Label(win, text="Entidad a la que pertenece", bg="#60A420", fg="black")
+    enti.pack(pady=3, side=tk.TOP)
+    entradant = tk.Entry(win)
+    entradant.pack(pady=7)
+    #
+    cantidad = tk.Label(win, text="Cantidad de dinero (banco)", bg="#60A420", fg="black")
+    cantidad.pack(pady=3, side=tk.TOP)
+    entradanc = tk.Entry(win)
+    entradanc.pack(pady=7)
+
+    usuario = []
+    usuario.append(usuarionuevo)
+    usuario.append(clavenu)
+    usuario.append(cantidad)
+    usuarios.append(enti)
+    #
+    boton2 = tk.Button(win, text="crear", command=guardar_datos)
+    boton2.pack()   
         
   
   
  
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack()
+  botoncrear = tk.Button(ventana, text="Crear usuario", command=abrirventana2)
+  botoncrear.pack(pady=7)
 
 
 """
