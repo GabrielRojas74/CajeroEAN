@@ -66,7 +66,9 @@ def login():
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
       dinero="500000"
-      print("Bienvenido ",usuarios)
+      welcome = Label(banco, text="Bienvenido"+usuarios , font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      welcome.pack(pady=25)
+
       consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       consultar.pack(pady=25)
 
