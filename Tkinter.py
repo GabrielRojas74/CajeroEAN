@@ -40,9 +40,10 @@ def login():
     for i in usuarios:
       if ((entrada1.get())== i[0] and (entrada2.get())== i[1]):
         entidades()
+        break
       else: 
         messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
-  
+        break
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
