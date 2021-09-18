@@ -279,3 +279,5 @@ ventanapeticion = tk.Tk()
 obj = Inicio(ventanapeticion)
 #se inicia el bucle
 ventanapeticion.mainloop()
+
+#sebastian juan gabriel ivan felipe
