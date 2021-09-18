@@ -65,6 +65,24 @@ def login():
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
+        consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      consultar.pack(pady=25)
+
+      messagebox.showinfo("Saldo","Tu saldo es de "+dinero)
+
+      Retirar = Label(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      Retirar.pack(pady=25)
+      messagebox.askokcancel("Retirar","Retirando monto")
+
+      Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      Transferir.pack(pady=25)
+
+      messagebox.askquestion("Transferir","¿Esta seguro de tranferirlo?")
+      messagebox.askokcancel("Tranferiendo","Enviendo el dinero")
+        
+        
+        
+        
         
 
     def Parqueadero():
