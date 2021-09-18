@@ -57,10 +57,10 @@ class Inicio:
         self.descripcion=StringVar()
         self.descripcion.set(str(" Crédito en Línea"))
         self.valorcol=IntVar()
-        # Este dato se Obtendría de la base de datos
+        # El dato se Obtendría de la base de datos
         self.valorcol.set(int(200000))
         self.interescol=DoubleVar()
-        # Este dato se Obtendría de la base de datos
+        # El dato se Obtendría de la base de datos
         self.interescol.set(0.02)
         self.fecha=StringVar()
         self.fecha.set(datetime.now())
@@ -78,7 +78,7 @@ class Inicio:
        
     def Consultarcol(self):
         self.Datocuenta()
-        # Por medio de este código se busca obtener la información en las bases de datos
+        # En este código se busca obtener la información en las bases de datos
         """n_cuenta=(self.numero_cuentacol.get(), )
         respuesta=self.cuentacl.encontrar(n_cuenta)
         if len(respuesta)>0:
