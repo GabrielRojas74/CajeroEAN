@@ -108,7 +108,7 @@ def login():
     botonres.pack(pady=10)
      #
    
-botonsig = Button(ventanain, text='Siguiente', font=("TIMES NEW ROMAN", 12), fg="#D72828", command=login)
+botonsig = Button(ventanain, text='Siguiente', font=("ARIAL", 15), fg="black", command=login)
 botonsig.pack(padx=20, pady=30)
 
 
