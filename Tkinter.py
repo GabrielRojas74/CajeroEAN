@@ -40,9 +40,10 @@ def login():
     for i in usuarios:
       if ((entrada1.get())== i[0] and (entrada2.get())== i[1]):
         entidades()
+        break
       else: 
         messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
-  
+        break
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
@@ -59,21 +60,12 @@ def login():
     loginto2.pack(pady=20)
       #
     def banco():
-      
       entidades.withdraw()
       banco=tk.Toplevel()
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
-<<<<<<< HEAD
-      dinero="500000"
-      welcome = Label(banco, text="Bienvenido"+usuarios , font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-      welcome.pack(pady=25)
-
-      consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-=======
-        consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
->>>>>>> b998c585ed34afb69d51121654b8251b76e104de
+      consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
       consultar.pack(pady=25)
 
       messagebox.showinfo("Saldo","Tu saldo es de "+dinero)
@@ -87,17 +79,7 @@ def login():
 
       messagebox.askquestion("Transferir","¿Esta seguro de tranferirlo?")
       messagebox.askokcancel("Tranferiendo","Enviendo el dinero")
-<<<<<<< HEAD
-
-
-=======
-        
-        
-        
-        
-        
->>>>>>> b998c585ed34afb69d51121654b8251b76e104de
-
+    
     def Parqueadero():
       entidades.withdraw()
       Parqueadero = tk.Toplevel()
@@ -113,10 +95,9 @@ def login():
       restaurante.geometry("600x500")
       restaurante.title("Restaurante EAN")
       restaurante.configure(bd=40, bg="#CD3618")
-        
-
-
-
+      bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      bien.pack()
+    
 
         #
     botonbanco = tk.Button(entidades, text="Banco EAN", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
@@ -132,4 +113,3 @@ botonsig.pack(padx=20, pady=30)
 
 
 ventanain.mainloop()
-                                        
