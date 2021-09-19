@@ -86,8 +86,12 @@ def login():
       Retirar.pack(pady=25)
       messagebox.askokcancel("Retirar", "Retirando monto")
 
+<<<<<<< HEAD
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
                           25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+=======
+      Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+>>>>>>> 58a25e90845de741dc4fad9691d212eda804af40
       Transferir.pack(pady=25)
 
       messagebox.askquestion("Transferir", "¿Esta seguro de tranferirlo?")
