@@ -1,5 +1,6 @@
 # cajeroEAN
-Para desarrollar este algoritmo se hizo uso de la herramienta Tkinter
+Proyecto Final del curso de Algoritmos y programación
+Para poder desarrollar este algoritmo se hizo uso de la herramienta Tkinter
 Para proporcionar una entrada y una salida de manera gráfica al algoritmo.
 ![captura de pantalla](https://user-images.githubusercontent.com/88062468/133941254-78d56cdb-7800-438d-92cf-312e76c89070.png)
 ![Captura de pantalla](https://user-images.githubusercontent.com/88062468/133941288-ad671264-b612-47c2-8e8c-504d8c3254b7.png)
