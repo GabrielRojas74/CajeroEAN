@@ -43,13 +43,13 @@ def login():
   def validar():
     for i in usuarios(0, 4):
         for a in range(0, 4):
-               if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
+                if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
                     entidades()
                     break
                 else:
-                  messagebox.showwarning(
+                    messagebox.showwarning(
                       "intente de nuevo", "usuario o contraseña no validos")
-                  break
+                    break
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
