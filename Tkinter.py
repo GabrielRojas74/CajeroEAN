@@ -43,8 +43,8 @@ def login():
   def validar():
         for a in range(0, 4):
           if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
-              entidades()
-              break
+            entidades()
+            break
           else:
               messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
                 
@@ -73,22 +73,23 @@ def login():
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
       for i in usuarios:
-          for x in range(0, 4):
+        for x in range(0, 4):
+          dinero = i[3]
 
-              dinero = i[1]
-      consultar = Label(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",
-                        25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-      consultar.pack(pady=25)
+      def saldo():
+        messagebox.showinfo("Saldo", "Tu saldo es de "+ str(dinero))
 
-      messagebox.showinfo("Saldo", "Tu saldo es de "+dinero)
+      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
+      botoncon.pack(pady=10)
+      
 
       Retirar = Label(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
-                      bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+                        bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       Retirar.pack(pady=25)
       messagebox.askokcancel("Retirar", "Retirando monto")
 
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
-                         25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+                          25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       Transferir.pack(pady=25)
 
       messagebox.askquestion("Transferir", "¿Esta seguro de tranferirlo?")
@@ -110,13 +111,13 @@ def login():
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", font=(
-        "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
+          "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
     botonbanco.pack(pady=10)
     botonparque = tk.Button(entidades, text="Parqueadero EAN", font=(
-        "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
+          "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
     botonparque.pack(pady=10)
     botonres = tk.Button(entidades, text="Restaurante EAN", font=(
-        "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
+          "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
     botonres.pack(pady=10)
     #
 
