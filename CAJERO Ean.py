@@ -87,13 +87,36 @@ def login():
       Retirar.pack(pady=25)
       messagebox.askokcancel("Retirar", "Retirando monto")
 
+      
+      
+      
+      botoncon = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=banco2)
+      botoncon.pack(pady=10)
+      
+      
+      
+      
+      
+      
+      
+      
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
                           25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       Transferir.pack(pady=25)
 
+      
+      
+      
+      
+      
+      
       messagebox.askquestion("Transferir", "¿Esta seguro de tranferirlo?")
       messagebox.askokcancel("Tranferiendo", "Enviendo el dinero")
 
+      
+      
+      
+      
     def Parqueadero():
       entidades.withdraw()
       Parqueadero = tk.Toplevel()
