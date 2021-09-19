@@ -118,6 +118,11 @@ def login():
       restaurante.configure(bd=40, bg="#CD3618")
       bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       bien.pack()
+      Transferir = Label(restaurante, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",
+                         25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      Transferir.pack(pady=25)
+      entrada3 = tk.Entry(restaurante)
+      entrada3.pack()
     
 
         #
