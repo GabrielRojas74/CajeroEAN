@@ -14,7 +14,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
 ####
-usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 1000],["admin", "clave", "parqueadero", 19999]]
+usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213", "banco", "1000"],["admin", "clave", "parqueadero", "19999"]]
 
 def login():
   ventanain.withdraw()
@@ -37,13 +37,14 @@ def login():
   
   #
   def validar():
-    for i in usuarios:
-      if ((entrada1.get())== i[0] and (entrada2.get())== i[1]):
-        entidades()
-        break
-      else: 
-        messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
-        break
+    for i in usuarios(0,4):
+          for a in range (0,4):
+                if (usuarios[a][0]==entrada1.get() and usuarios[a][1]==entrada2.get()):
+                      entidades()
+                      break
+                else: 
+                  messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
+                  break
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
@@ -65,8 +66,13 @@ def login():
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
+      for i in usuarios:
+            for x in range(0,4):
+                  
+              dinero=i[1]
       consultar = Label(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
       consultar.pack(pady=25)
+
 
       messagebox.showinfo("Saldo","Tu saldo es de "+dinero)
 
