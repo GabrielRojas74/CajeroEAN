@@ -14,17 +14,18 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
 ####
-usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213", "banco", "1000"], ["admin", "clave", "parqueadero", "19999"],[" "," "," "," "]
+usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213", "banco", "1000"], ["admin", "clave", "parqueadero", "19999"],[" "," "," "," "]]
+
 
 
 def login():
+
   ventanain.withdraw()
   ventana = tk.Tk()
   ventana.title("log in")
   ventana.geometry("700x600")
   ventana.config(bd=40, bg="#8A8A8A")
-  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",
-                  25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
   loginto.pack(pady=20)
 
   #
@@ -100,8 +101,8 @@ def login():
       Parqueadero.title("Parqueadero EAN")
       Parqueadero.configure(bd=40, bg="#765048")
 
-        opciones= Label(Parqueadero, text="digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
-        opciones.pack(pady=25)
+      opciones= Label(Parqueadero, text="digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
+      opciones.pack(pady=25)
 
       Transferir = Label(Parqueadero, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",
                          25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
@@ -144,7 +145,7 @@ def login():
       restaurante.title("Restaurante EAN")
       restaurante.configure(bd=40, bg="#CD3618")
 
-=======
+
       bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       bien.pack()
       Transferir = Label(restaurante, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
@@ -153,7 +154,7 @@ def login():
       entrada3.pack()
       
     
->>>>>>> Stashed changes
+
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", font=(
