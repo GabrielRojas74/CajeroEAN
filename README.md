@@ -23,3 +23,9 @@ Y en cuanto al ParqueaderoEan también se puede:
 -Consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente.
 -También se necesita tener un inventario de los billetes y monedas que hay en la caja.
 ![Captura de pantalla](https://user-images.githubusercontent.com/88062468/133941217-7bf6a224-e507-48d3-b07a-492509d221da.png)
+A la hora de su comprobación y utilización del programa, gracias a la ayuda de la herramienta tkinter
+El programa se puede manifestar graficamente de la siguiente manera
+![Captura](https://user-images.githubusercontent.com/88062468/133941990-22dcaa83-f9e2-46c3-87c8-a79917fb424f.png)
+![Captura](https://user-images.githubusercontent.com/88062468/133942032-188f234a-c685-4fcd-ae2d-6bc209ca6514.png)
+
+
