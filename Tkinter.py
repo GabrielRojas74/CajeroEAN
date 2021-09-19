@@ -87,6 +87,8 @@ def login():
       Parqueadero.geometry("600x500")
       Parqueadero.title("Parqueadero EAN")
       Parqueadero.configure(bd=40, bg="#765048")
+      opciones= Label(Parqueadero, text="digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
+      opciones.pack(pady=25)
       
       Transferir = Label(Parqueadero, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",
                          25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
