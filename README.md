@@ -1,9 +1,8 @@
-# cajeroEAN
-Proyecto Final del curso de Algoritmos y programación
-Para poder desarrollar este algoritmo se hizo uso de la herramienta Tkinter
+#Cajero EAN
+Proyecto Final del curso de Algoritmos y programación. 
+
+Para poder desarrollar este algoritmo se hizo uso de la herramienta Tkinter que es  binding de la biblioteca gráfica
 Para proporcionar una entrada y una salida de manera gráfica al algoritmo.
-![captura de pantalla](https://user-images.githubusercontent.com/88062468/133941254-78d56cdb-7800-438d-92cf-312e76c89070.png)
-![Captura de pantalla](https://user-images.githubusercontent.com/88062468/133941288-ad671264-b612-47c2-8e8c-504d8c3254b7.png)
 El algoritmo de CajeroEan tiene como finalidad 
 Darle soporte a Banco Ean,
 Restaurante Ean,
@@ -14,18 +13,20 @@ En cuanto al BancoEan, se permite:
 -Retirar dinero
 -Consultar el dinero que se tiene en esta
 -Transferir el dinero a otra cuenta
-![Captura de pantalla](https://user-images.githubusercontent.com/88062468/133941091-e8f4cec3-3066-42c2-8fcf-db57a71d6d19.png)
+
 En la opción del RestauranteEan se puede:
 -Consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente
 -Se necesita tener un inventario de los billetes y monedas que hay en la caja
-![Captura de pantalla](https://user-images.githubusercontent.com/88062468/133941135-ec49cdf0-ca66-4949-855e-2c23ca8c051e.png)
+
 Y en cuanto al ParqueaderoEan también se puede:
 -Consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente.
 -También se necesita tener un inventario de los billetes y monedas que hay en la caja.
-![Captura de pantalla](https://user-images.githubusercontent.com/88062468/133941217-7bf6a224-e507-48d3-b07a-492509d221da.png)
+
 A la hora de su comprobación y utilización del programa, gracias a la ayuda de la herramienta tkinter
 El programa se puede manifestar graficamente de la siguiente manera
+
 ![Captura](https://user-images.githubusercontent.com/88062468/133941990-22dcaa83-f9e2-46c3-87c8-a79917fb424f.png)
+![image](https://user-images.githubusercontent.com/87994869/133942386-6e9c2352-3e0c-4951-86b0-b9078bc3435a.png)
 ![Captura](https://user-images.githubusercontent.com/88062468/133942032-188f234a-c685-4fcd-ae2d-6bc209ca6514.png)
 
 
