@@ -72,7 +72,7 @@ def login():
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
-      consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
+      consultar = Label(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
       consultar.pack(pady=25)
 
       messagebox.showinfo("Saldo","Tu saldo es de "+dinero)
@@ -102,8 +102,7 @@ def login():
       restaurante.geometry("600x500")
       restaurante.title("Restaurante EAN")
       restaurante.configure(bd=40, bg="#CD3618")
-      bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-      bien.pack()
+     
     
 
         #

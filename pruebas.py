@@ -9,24 +9,24 @@ import webbrowser
 #import mysql.connector
 class Inicio:
     #############
-    #  la función obtiene la ventana principal
+    #La función obtiene la ventana principal
     def __init__(self, ventanapeticion):
-        # medidas de la ventana
+        #Medidas de la ventana
         ventanapeticion.geometry('600x400')
         ventanapeticion.config(bd=40, bg="#8A8A8A")  # borde exterior
         ventanapeticion.title("Cajero Ean")
-        # Label
+        #Label
         Label(ventanapeticion, text="Bienvenido al Cajero EAN", font=("ARIAL", 30, ITALIC, BOLD), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED).pack()
         # crear Boton que cuando se haga click empiece la función Usuario
         botonprimero = Button(ventanapeticion, text='Siguiente', font=("TIMES NEW ROMAN", 12), fg="#D72828", command=self.Ean)
         botonprimero.pack()
 
     def Ean(self):
-        # Cerrar ventana
+        #Cerrar ventana
         ventanapeticion.withdraw()
-        #ventana Productos
+        #Ventana Productos
         self.Ean = tk.Toplevel()
-        # medidas de la ventana
+        #Medidas de la ventana
         self.Ean.geometry('400x500')
         self.Ean.config(bd=20, bg="#8A8A8A")
         self.Ean.title("Entidades")
@@ -40,33 +40,33 @@ class Inicio:
         Button(listentidades, text="Parqueadero Ean", font=("Bodoni Bd BT", 14), bg="#A1CAB6",fg="black", ).grid(row=2, column=0, padx=100, pady=10)
 
     def Datocuenta(self):
-        # Cerrar ventana principal
+        #Cerrar ventana principal
         self.Ean.withdraw()
         self.datcl = tk.Toplevel()
-        # medidas de la ventana
+        #Medidas de la ventana
         self.datcl.geometry('400x400')
         self.datcl.config(bd=20, bg="#8A8A8A")
         self.datcl.title("Bancos")
-        #variables
+        #Variables
         self.numero_cuentaCol = StringVar()
         self.nombre_cliente = StringVar()
-        # Este dato se Obtendría de la base de datos
+        #Este dato se Obtendría de la base de datos
         self.nombre_cliente.set(str("Pedro Gomez"))
         self.cedula = StringVar()
-        # Este dato se Obtendría de la base de datos
+        #Este dato se Obtendría de la base de datos
         self.cedula.set(str("54897623"))
         self.descripcion = StringVar()
         self.descripcion.set(str(" Crédito en Línea"))
         self.valorcol = IntVar()
-        # Este dato se Obtendría de la base de datos
+        #Este dato se Obtendría de la base de datos
         self.valorcol.set(int(200000))
         self.interescol = DoubleVar()
-        # Este dato se Obtendría de la base de datos
+        #Este dato se Obtendría de la base de datos
         self.interescol.set(0.02)
         self.fecha = StringVar()
         self.fecha.set(datetime.now())
         # self.cuentacl=Clientecuentas()
-        # Label
+        #Label
         Label(self.datcl, text="Ingresa tus datos", font=("Bahnschrift SemiBold Condensed",20, ITALIC, BOLD), bg="WHITE", fg="#271F26", bd=10, relief=RAISED, width=60).pack()
 
         datcliente = LabelFrame(self.datcl, text="Datos", font=("Bodoni Bd BT", 12), bg="#1BCB0D", fg="white", relief=RIDGE, bd=10)
@@ -78,7 +78,7 @@ class Inicio:
 
     def Consultarcol(self):
         self.Datocuenta()
-        # Por medio de este código se busca obtener la información en las bases de datos
+        #Por medio de este código se busca obtener la información en las bases de datos
         """n_cuenta=(self.numero_cuentacol.get(), )
         respuesta=self.cuentacl.encontrar(n_cuenta)
         if len(respuesta)>0:
@@ -93,20 +93,20 @@ class Inicio:
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     def FacturaColp(self):
-        # Cerrar ventana anterior
+        #Cerrar ventana anterior
         self.datcl.withdraw()
-        #  ventana Productos
+        #Ventana Productos
         self.Vcol = tk.Toplevel()
-        #  medidas de la ventana
+        #Medidas de la ventana
         self.Vcol.geometry('1050x1000')
         self.Vcol.config(bd=20, bg="#8469AE")
         self.Vcol.title("Colpatria")
-        # variables
+        #Variables
         self.numero_facturaCol = StringVar()
         self.numero_facturaCol.set(str(random.randint(100, 9999)))
         self.numero_cuentaCol = StringVar()
 
-        # Label
+        #Label
         Label(self.Vcol, text="Colpatria Pago Crédito en Línea", font=("Bahnschrift SemiBold Condensed",
               20, ITALIC, BOLD), bg="#E2C4E1", fg="#271F26", bd=10, relief=RAISED, width=60).pack()
 
