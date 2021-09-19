@@ -14,7 +14,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
 ####
-usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 1000],["admin", "clave", "parqueadero", 19999]]
+usuarios=[["gabriel","1234","restaurante",10_000000],["ivan","1213","banco", 1000],["admin","clave","parqueadero",1999]]
 
 def login():
   ventanain.withdraw()
@@ -37,14 +37,21 @@ def login():
   
   #
   def validar():
-    for i in usuarios:
-      if ((entrada1.get())== i[0] and (entrada2.get())== i[1]):
-        entidades()
-        break
-      else: 
-        messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
-        break
-  boton3 = tk.Button(ventana, text="validar clave", command=validar)
+    print(type(entrada1.get()))
+    for i in range(0,len(usuarios)):
+      if(usuarios[i][0]==entrada1.get()):
+         print("usuario")
+         if(usuarios[i][1]==entrada2.get()):
+             print("contraseña")
+             entidades()
+             break
+      else:
+        messagebox.showwarning(
+            "intente de nuevo", "usuario o contraseña no validos")
+       
+        
+
+  boton3 = tk.Button(ventana, text="validar clave",font=("ARIAL", 15), fg="black", command=validar)
   boton3.pack(pady=20)
 
   loginto3 = Label(ventana, text="En caso de no tener un usuario comuniquese con el administrador (018000 admin)", font=("arial", 11,  BOLD), bg="#E36421", fg="black", width="90", height=2, bd=8, relief=RAISED)
