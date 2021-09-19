@@ -14,7 +14,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
 ####
-usuarios=[["gabriel","1234","restaurante",10_000000],["ivan","1213","banco", 1000],["admin","clave","parqueadero",1999]]
+usuarios=[["","","", ],["gabriel","1234","restaurante",10_000000],["ivan","1213","banco", 1000],["admin","clave","parqueadero",1999]]
 
 def login():
   ventanain.withdraw()
@@ -37,20 +37,14 @@ def login():
   
   #
   def validar():
-    print(type(entrada1.get()))
     for i in range(0,len(usuarios)):
       if(usuarios[i][0]==entrada1.get()):
-         print("usuario")
          if(usuarios[i][1]==entrada2.get()):
-             print("contraseña")
              entidades()
              break
       else:
-        messagebox.showwarning(
-            "intente de nuevo", "usuario o contraseña no validos")
+        messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
        
-        
-
   boton3 = tk.Button(ventana, text="validar clave",font=("ARIAL", 15), fg="black", command=validar)
   boton3.pack(pady=20)
 
@@ -72,7 +66,7 @@ def login():
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
-      consultar = Label(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
+      consultar = Label(banco, text="Consultar saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
       consultar.pack(pady=25)
 
       messagebox.showinfo("Saldo","Tu saldo es de "+dinero)
@@ -93,8 +87,26 @@ def login():
       Parqueadero.geometry("600x500")
       Parqueadero.title("Parqueadero EAN")
       Parqueadero.configure(bd=40, bg="#765048")
-    
       
+      Transferir = Label(Parqueadero, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",
+                         25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      Transferir.pack(pady=25)
+      entrada3 = tk.Entry(Parqueadero)
+      entrada3.pack()
+      
+      
+      def opcionespar():
+        Parqueadero.withdraw()
+        Parqueaderoop = tk.Toplevel()
+        Parqueaderoop.geometry("600x500")
+        Parqueaderoop.title("Parqueadero EAN")
+        Parqueaderoop.configure(bd=40, bg="#765048")
+        Transferir = Label(Parqueaderoop, text="opcion1", font=("Bahnschrift SemiBold Condensed",
+                                                                    25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+        Transferir.pack(pady=25)
+
+      botonpar = Button(Parqueadero, text='Siguiente', font=("ARIAL", 15), fg="black", command=opcionespar)
+      botonpar.pack(padx=20, pady=30)
 
     def restaurante():
       entidades.withdraw()
@@ -102,7 +114,8 @@ def login():
       restaurante.geometry("600x500")
       restaurante.title("Restaurante EAN")
       restaurante.configure(bd=40, bg="#CD3618")
-     
+      bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      bien.pack()
     
 
         #
