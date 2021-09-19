@@ -99,7 +99,7 @@ def login():
       Parqueadero.geometry("600x500")
       Parqueadero.title("Parqueadero EAN")
       Parqueadero.configure(bd=40, bg="#765048")
-<<<<<<< Updated upstream
+
         opciones= Label(Parqueadero, text="digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
         opciones.pack(pady=25)
 
@@ -110,7 +110,7 @@ def login():
       entrada3.pack()
 
 
-=======
+
       opciones= Label(Parqueadero, text="digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
       opciones.pack(pady=25)
       
@@ -120,7 +120,7 @@ def login():
       entrada3.pack()
        
       
->>>>>>> Stashed changes
+
       def opcionespar():
         Parqueadero.withdraw()
         Parqueaderoop = tk.Toplevel()
@@ -133,17 +133,17 @@ def login():
       botonpar = Button(Parqueadero, text='Siguiente', font=("ARIAL", 15), fg="black", command=opcionespar)
       botonpar.pack(padx=20, pady=30)
 
-<<<<<<< Updated upstream
-=======
+
+
 ###
->>>>>>> Stashed changes
+
     def restaurante():
       entidades.withdraw()
       restaurante = tk.Toplevel()
       restaurante.geometry("600x500")
       restaurante.title("Restaurante EAN")
       restaurante.configure(bd=40, bg="#CD3618")
-<<<<<<< Updated upstream
+
 =======
       bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       bien.pack()
