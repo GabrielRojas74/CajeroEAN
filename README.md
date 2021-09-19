@@ -1,4 +1,4 @@
-Cajero EAN
+#Cajero EAN
 Proyecto Final del curso de Algoritmos y programación. 
 
 Para poder desarrollar este algoritmo se hizo uso de la herramienta Tkinter que es  binding de la biblioteca gráfica
@@ -24,6 +24,7 @@ Y en cuanto al ParqueaderoEan también se puede:
 
 A la hora de su comprobación y utilización del programa, gracias a la ayuda de la herramienta tkinter
 El programa se puede manifestar graficamente de la siguiente manera
+
 ![Captura](https://user-images.githubusercontent.com/88062468/133941990-22dcaa83-f9e2-46c3-87c8-a79917fb424f.png)
 ![image](https://user-images.githubusercontent.com/87994869/133942386-6e9c2352-3e0c-4951-86b0-b9078bc3435a.png)
 ![Captura](https://user-images.githubusercontent.com/88062468/133942032-188f234a-c685-4fcd-ae2d-6bc209ca6514.png)
