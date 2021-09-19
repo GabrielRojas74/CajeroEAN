@@ -32,13 +32,7 @@ def login():
   entrada1.pack(pady=7)
   clavec = tk.Label(ventana, text="Clave:", bg="#60A420", fg="black")
   clavec.pack(pady=3, side=tk.TOP)
-  from tkinter import *
-import tkinter as tk
-from tkinter import ttk
-from tkinter import messagebox
-import tkinter
-from tkinter.font import BOLD, ITALIC
-import random
+ 
 
 ventanain = Tk()
 ventanain.title("CAJERO EAN")
