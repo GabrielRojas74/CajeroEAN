@@ -11,12 +11,11 @@ ventanain.title("CAJERO EAN")
 ventanain.geometry('600x500')
 ventanain.config(bd=40, bg="#8A8A8A")
 
-etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
-    "ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
+etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
 ####
-usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213",
-                                                               "banco", "1000"], ["admin", "clave", "parqueadero", "19999"], [" ", " ", " ", " "]]
+usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 90_000], ["admin", "clave", "parqueadero", 960_000],[" "," "," "," "]]
+
 
 
 def login():
@@ -26,8 +25,7 @@ def login():
   ventana.title("log in")
   ventana.geometry("700x600")
   ventana.config(bd=40, bg="#8A8A8A")
-  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",
-                  25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
   loginto.pack(pady=20)
 
   #
@@ -43,16 +41,17 @@ def login():
   #
   lista=[]
   def validar():
-      for a in range(0, 4):
+        for a in range(0, 4):
           if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
             entidades()
+            lista.append(usuarios[a][0])
+            lista.append(usuarios[a][1])
             break
           else:
-              messagebox.showwarning(
-                  "intente de nuevo", "usuario o contraseña no validos")
+              messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
 
-  boton3 = tk.Button(ventana, text="validar clave",
-                     cursor="hand2", command=validar)
+                
+  boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
   loginto3 = Label(ventana, text="En caso de no tener un usuario comuniquese con el administrador (018000 admin)", font=(
@@ -65,17 +64,29 @@ def login():
     entidades.geometry("600x500")
     entidades.title("Entidades")
     entidades.config(bd=40, bg="#8A8A8A")
-    loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",
-                     25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+    loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
     loginto2.pack(pady=20)
-    #
-
+    
+    
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
+      
+      
+      def saldo():
+        print(lista)
+        for a in range(0, 4):
+            if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
+                  messagebox.showinfo("Tu saldo es: ",usuarios[a][3])
+                  break
+      
+      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
+      botoncon.pack(pady=10)
+      
+
       
       
       def saldo():
