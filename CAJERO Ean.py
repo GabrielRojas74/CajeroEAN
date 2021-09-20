@@ -73,6 +73,7 @@ def login():
 
     dinero = 0
 
+
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
@@ -81,6 +82,7 @@ def login():
       banco.configure(bd=40, bg="#1586BF")
 
       def saldo():
+
         print(lista)
         for a in range(0, 4):
             if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
@@ -127,7 +129,6 @@ def login():
 
           
       botonpar100 = Button(banco, text='retiro', font=("ARIAL", 15), fg="black", command=xfa100profe)
-
           banco.withdraw()
           bancop = tk.Toplevel()
           bancop.geometry("600x500")
@@ -320,8 +321,7 @@ def login():
       Transferir.pack(pady=25)
       entrada3 = tk.Entry(restaurante)
       entrada3.pack()
-
-    
+<<<<<<< Updated upstream
       def opcionespar():
         restaurante.withdraw()
         restauranteop = tk.Toplevel()
@@ -407,6 +407,8 @@ def login():
       
     
 
+=======
+>>>>>>> Stashed changes
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=(
