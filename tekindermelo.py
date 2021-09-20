@@ -41,6 +41,7 @@ def login():
   entrada2.pack(pady=7)
 
   #
+  lista=[]
   def validar():
       for a in range(0, 4):
           if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
