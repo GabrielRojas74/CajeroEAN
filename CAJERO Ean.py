@@ -7,7 +7,7 @@ from tkinter.font import BOLD, ITALIC
 import random
 
 ventanain = Tk()
-ventanain.title("CAJERO EAN")
+ventanain.title("Cajero EAN")
 ventanain.geometry('600x500')
 ventanain.config(bd=40, bg="#8A8A8A")
 
