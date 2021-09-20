@@ -1,10 +1,9 @@
 #Solo se puede consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente.Se necesita tener un inventario de los billetes y monedas que hay en la caja.
 dinero_de_caja=2_456_850
 
-
-opcion=int(input(("¿Qué desea hacer? Presione 1 para consultar el dinero de la caja, Presione 2 para dar las vueltas al cliente ")))
-if (opcion==1):
-        print("El dinero en la caja es de: ",dinero_de_caja)
+opcion=int(input(("¿Qué desea hacer? Presione 1 para consultar el dinero de la caja, Presione 2 para dar el cambio al cliente ")))
+if (opcion==1)
+        print("El dinero en la caja es de: ", dinero_de_caja)
         if (dinero_de_caja>=100_000):
             queda=dinero_de_caja//100_000
             print(str(queda)+ "billete\s de 100_000 pesos")
@@ -47,11 +46,11 @@ if (opcion==1):
             dinero_de_caja= dinero_de_caja % 10
             print("Gracias por usar y confiar en cajero EAN=)")
 elif (opcion==2):
-    retiro=int(input("¿Cuánto desea retirar?: "))
-    if (retiro<=dinero_de_caja):
-        print("Se han retirado: ",retiro)
-        dinero_de_caja=dinero_de_caja-retiro
-        print("los billtes a dar son: ")
+        retiro=int(input("¿Cuánto desea retirar?: "))
+        if (retiro<==dinero_de_caja):
+            print("Se han retirado: ", retiro)
+            dinero_de_caja=dinero_de_caja-retiro
+            print("Los billetes a dar son: ")
         if (retiro>=100_000):
             queda=retiro//100_000
             print(str(queda)+ "billete\s de 100_000 pesos")
@@ -97,3 +96,5 @@ elif (opcion==2):
     else:
         print("La caja no posee tal cantidad de dinero=(")
         print("Gracias por usar y confiar en cajero EAN=)")
+        
+        
