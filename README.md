@@ -1,4 +1,4 @@
-Cajero EAN.
+Cajero EAN:
 
 Proyecto Final del curso de Algoritmos y programación. 
 
