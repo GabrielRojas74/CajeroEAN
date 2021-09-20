@@ -47,7 +47,7 @@ def login():
           else:
               messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
                 
-  boton3 = tk.Button(ventana, text="validar clave", command=validar)
+  boton3 = tk.Button(ventana, text="validar clave", cursor="hand2", command=validar)
   boton3.pack(pady=20)
 
   loginto3 = Label(ventana, text="En caso de no tener un usuario comuniquese con el administrador (018000 admin)", font=(
@@ -77,7 +77,7 @@ def login():
       def saldo():
         messagebox.showinfo("Saldo", "Tu saldo es de "+ str(dinero))
 
-      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
+      botoncon = tk.Button(banco, text="Consultar su saldo", cursor="hand2", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
       botoncon.pack(pady=10)
       
 
@@ -91,7 +91,7 @@ def login():
       
       
       
-      botoncon = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=banco2)
+      botoncon = tk.Button(banco, text="Retiro", cursor="hand2", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=banco2)
       botoncon.pack(pady=10)
       
       
@@ -245,18 +245,18 @@ def login():
 
 
       #
-    botonbanco = tk.Button(entidades, text="Banco EAN", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
+    botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
     botonbanco.pack(pady=10)
-    botonparque = tk.Button(entidades, text="Parqueadero EAN", font=(
+    botonparque = tk.Button(entidades, text="Parqueadero EAN", cursor="hand2", font=(
           "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
     botonparque.pack(pady=10)
-    botonres = tk.Button(entidades, text="Restaurante EAN", font=(
+    botonres = tk.Button(entidades, text="Restaurante EAN", cursor="hand2", font=(
           "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
     botonres.pack(pady=10)
     #
 
 
-botonsig = Button(ventanain, text='Siguiente', font=(
+botonsig = Button(ventanain, text='Siguiente', cursor="hand2", font=(
     "ARIAL", 15), fg="black", command=login)
 botonsig.pack(padx=20, pady=30)
 
