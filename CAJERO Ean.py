@@ -87,11 +87,38 @@ def login():
       messagebox.askokcancel("Retirar", "Retirando monto")
 
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+
+      
+      
+      
+      botoncon = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=banco2)
+      botoncon.pack(pady=10)
+      
+      
+      
+      
+      
+      
+      
+      
+      Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
+                          25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+
       Transferir.pack(pady=25)
 
+      
+      
+      
+      
+      
+      
       messagebox.askquestion("Transferir", "¿Esta seguro de tranferirlo?")
       messagebox.askokcancel("Tranferiendo", "Enviendo el dinero")
 
+      
+      
+      
+      
     def Parqueadero():
       entidades.withdraw()
       Parqueadero = tk.Toplevel()
@@ -118,6 +145,50 @@ def login():
           vueltas.geometry("600x500")
           vueltas.title("Vueltas")
           vueltas.configure(bd=40, bg="#765048")
+          retiro=int(input("¿Cuanto desea retirar?: "))
+    if (entrada4<=entrada3):
+        dinero_de_caja=entrada3
+        
+        if (retiro>=100_000):
+            queda=retiro//100_000
+            print(str(queda)+ "billete\s de 100_000 pesos")
+            retiro=retiro % 100_000
+        if (retiro>=50_000):
+            queda=retiro//50_000
+            print(str(queda)+ "billete\s de 50_000 pesos")
+            retiro=retiro% 50_000
+        if (retiro>=20_000):
+            queda=retiro//20_000
+            print(str(queda)+ "billete\s de 20_000 pesos")
+            retiro= retiro % 20_000
+        if (retiro>=10_000):
+            queda=retiro//10_000
+            print(str(queda)+ "billete\s de 10_000 pesos")
+            retiro=retiro % 10_000
+        if (retiro>=5_000):
+            queda=retiro//5_000
+            print(str(queda)+ "billete\s de 5_000 pesos")
+            dretiro= retiro % 5_000
+        if (retiro>=1_000):
+            queda=retiro//1_000
+            print(str(queda)+ "billete\s de 1_000 pesos")
+            retiro=retiro % 1_000
+        if (retiro>=500):
+            queda=retiro//500
+            print(str(queda)+ "moneda\s de 500 pesos")
+            retiro=retiro % 500
+        if (retiro>=200):
+            queda=retiro//200
+            print(str(queda)+ "moneda\s de 200 pesos")
+            retiro=retiro % 200
+        if (retiro>=100):
+            queda=retiro//100
+            print(str(queda)+ "moneda\s de 100 pesos")
+            retiro=retiro % 100
+        if (retiro>=10):
+            queda=retiro//10
+            print(str(queda)+ "moneda\s de 10 pesos")
+            retiro=retiro % 10
 
         dinerocaja = Button(Parqueaderoop, text='Dinero Caja', font=("ARIAL", 15), fg="black", command=sextosentido)
         dinerocaja.pack(padx=20, pady=30)
