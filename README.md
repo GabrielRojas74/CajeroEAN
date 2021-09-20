@@ -10,13 +10,13 @@ Parqueadero Ean.
 Por lo cual tiene un monto disponible para cada entidad.
 En cada una permite ingresar el usuario y la contraseña debida para continuar con el debido programa
 En cuanto al BancoEan, se permite:
--Retirar dinero
--Consultar el dinero que se tiene en esta
--Transferir el dinero a otra cuenta
+-Retirar dinero.
+-Consultar el dinero que se tiene en esta.
+-Transferir el dinero a otra cuenta.
 
 En la opción del RestauranteEan se puede:
--Consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente
--Se necesita tener un inventario de los billetes y monedas que hay en la caja
+-Consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente.
+-Se necesita tener un inventario de los billetes y monedas que hay en la caja.
 
 Y en cuanto al ParqueaderoEan también se puede:
 -Consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente.
