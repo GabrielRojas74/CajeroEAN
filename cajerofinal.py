@@ -16,8 +16,6 @@ etiquetabienvenidos.pack()
 ####
 usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213", "banco", "1000"], ["admin", "clave", "parqueadero", "19999"],[" "," "," "," "]]
 
-
-
 def login():
 
   ventanain.withdraw()
@@ -85,10 +83,10 @@ def login():
             bancop = tk.Toplevel()
             bancop.geometry("600x500")
             bancop.title("Retiro EAN")
-            bancop.configure(bd=40, bg="#765048")
+            bancop.configure(bd=40, bg="#1586BF")
             reti= Label(bancop, text="Digite el la cantidad que quiere retirar", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
             reti.pack(pady=25)
-            clavecd= tk.Label(bancop, text="Monto:", bg="#60A420", fg="black")
+            clavecd= tk.Label(bancop, text="Monto:", fg="black")
             clavecd.pack(pady=3, side=tk.TOP)
             entrada200 = tk.Entry(bancop)
             entrada200.pack(pady=7)
@@ -183,12 +181,12 @@ def login():
         def cambiospues():
           Parqueaderoop.withdraw()
           vueltas = tk.Toplevel()
-          vueltas.geometry("600x500")
+          vueltas.geometry("400x300")
           vueltas.title("Vueltas")
           vueltas.configure(bd=40, bg="#765048")
-          dinerocaja = Label(vueltas, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocaja = Label(vueltas, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 18, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocaja.pack(pady=25)
-          vueltass = Label(vueltas,text=str(entrada4.get())) 
+          vueltass = Label(vueltas,text=int(entrada4.get())) 
           vueltass.pack(pady=25)
           retiro= int(entrada4.get()) 
           dinero_de_caja = int(entrada3.get()) 
@@ -237,12 +235,9 @@ def login():
             print("El dinero que queda en la caja es ", resultado)
          
           
-          
-       
-
-        dinerocaja = Button(Parqueaderoop, text='Dinero Caja', font=("ARIAL", 15), fg="black", command=sextosentido)
+        dinerocaja = Button(Parqueaderoop, text='Dinero Caja', font=("ARIAL", 15), bg="purple", fg="black", command=sextosentido)
         dinerocaja.pack(padx=20, pady=30)
-        dasda = tk.Label(Parqueaderoop, text="Digite el dinero para dar las vueltas", font=("ARIAL", 13), bg="#60A420", fg="black")
+        dasda = tk.Label(Parqueaderoop, text="Digite el dinero para dar las vueltas", font=("ARIAL", 13), fg="black")
         dasda.pack(pady=3, side=tk.TOP)
         entrada4 = tk.Entry(Parqueaderoop)
         entrada4.pack(pady=20)
