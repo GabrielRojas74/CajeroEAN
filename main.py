@@ -300,7 +300,7 @@ def login():
           cambios.geometry("600x500")
           cambios.title("Vueltas")
           cambios.configure(bd=40, bg="#00B4D8")
-          dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
           cambioss = Label(cambios,text=str(entrada4.get())) 
           cambioss.pack(pady=25)
@@ -349,7 +349,7 @@ def login():
               retiro = retiro % 10
             resultado=dinero_de_caja-retiro
             print("El dinero que queda en la caja es ", resultado)
-        dinerocajas = Button(restaurante, text='Dinero Caja', font=("ARIAL", 20), fg="black", command=cambios)
+        dinerocajas = Button(restaurante, text='Dinero Caja', font=("ARIAL", 20), fg="black", command=messirve)
         dinerocajas.pack(padx=20, pady=30)
         nea = tk.Label(restauranteop, text="Digite el dinero para dar el cambio", font=("ARIAL", 15), bg="#F77F00", fg="black")
         nea.pack(pady=3, side=tk.TOP)
