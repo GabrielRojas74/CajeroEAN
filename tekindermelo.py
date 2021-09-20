@@ -85,20 +85,7 @@ def login():
       
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
       botoncon.pack(pady=10)
-      
-
-      
-      
-      def saldo():
-        print(lista)
-        for a in range(0, 4):
-            if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
-                  messagebox.showinfo("Tu saldo es: ",usuarios[a][3])
-                  break
-      
-      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
-      botoncon.pack(pady=10)
-      
+     
 
 
       def xfa100profe():
