@@ -222,12 +222,7 @@ def login():
             queda = dinero_de_caja//10
             print(str(queda) + "moneda\s de 10 pesos")
             dinero_de_caja = dinero_de_caja % 10
-           
-          
-        
-
-        
-
+  
         def cambiospues():
           Parqueaderoop.withdraw()
           vueltas = tk.Toplevel()
@@ -371,9 +366,6 @@ def login():
             print(str(queda) + "moneda\s de 10 pesos")
             dinero_de_caja = dinero_de_caja % 10
           
-        
-
-        
 
         def cambios():
           restauranteop.withdraw()
@@ -430,7 +422,7 @@ def login():
               retiro = retiro % 10
             resultado=dinero_de_caja-retiro
             print("El dinero que queda en la caja es ", resultado)
-        dinerocajas = Button(restaurante, text='Dinero Caja', font=("ARIAL", 20), fg="black", command=messirve)
+        dinerocajas = Button(restauranteop, text='Dinero Caja', font=("ARIAL", 20), fg="black", command=messirve)
         dinerocajas.pack(padx=20, pady=30)
         nea = tk.Label(restauranteop, text="Digite el dinero para dar el cambio", font=("ARIAL", 15), bg="#F77F00", fg="black")
         nea.pack(pady=3, side=tk.TOP)
@@ -444,13 +436,6 @@ def login():
           "ARIAL", 20), fg="black", command=opcionespares)
       botonpar.pack(padx=20, pady=30)
       retiro = int(input("¿Cuanto desea retirar?: "))
-
-
-
-      
-      
-    
-
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
