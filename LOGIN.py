@@ -32,8 +32,8 @@ while True:
         usuario.append(contraseña)
         usuario.append(tipo)
         usuario.append(monto)
-        
+        usuario.append(usuario)
         print("Ha sido resgistrado")
         print(usuarios)
-        usuario.append(usuario)
+        
 #si se puede
