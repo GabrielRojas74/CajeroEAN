@@ -48,10 +48,11 @@ def login():
             lista.append(usuarios[a][1])
             break
           else:
-              messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
+              etiquetaventana2=tk.Label(ventana, text="intente de nuevo, usuario o contraseña no validos", font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+              etiquetaventana2.place(x=125,y=305)
 
                 
-  boton3 = tk.Button(ventana, text="validar clave", command=validar)
+  boton3 = tk.Button(ventana, text="validar clave", cursor="hand2", command=validar)
   boton3.pack(pady=20)
 
   loginto3 = Label(ventana, text="En caso de no tener un usuario comuniquese con el administrador (018000 admin)", font=(
@@ -80,7 +81,9 @@ def login():
         print(lista)
         for a in range(0, 4):
             if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
-                  messagebox.showinfo("Tu saldo es: ",usuarios[a][3])
+                  etiquetaventana3=tk.Label(banco, text="Tu saldo es: "+str(usuarios[a][3]), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+                  etiquetaventana3.place(x=50,y=50)
+                  etiquetaventana3.pack()
                   break
       
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
@@ -108,7 +111,9 @@ def login():
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  messagebox.showinfo("Retiro exitoso",saldo)
+                  etiquetaventana3=tk.Label(bancop, text="Retiro exitoso, dinero restante: "+str(saldo), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+                  etiquetaventana3.place(x=50,y=50)
+                  etiquetaventana3.pack()
             boton2222= Button(bancop, text="Retirar ", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=profe100)
             boton2222.pack(padx=20, pady=30)
             
@@ -141,7 +146,9 @@ def login():
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  messagebox.showinfo("Transferencia exitosa",saldo)
+                  etiquetaventana3=tk.Label(bancoop, text="Transferencia exitosa, dinero restante: "+str(saldo), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+                  etiquetaventana3.place(x=50,y=50)
+                  etiquetaventana3.pack()
             boton2222= Button(bancoop, text="Transferir", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=retiro)
             boton2222.pack(padx=20, pady=30)
             
@@ -276,8 +283,9 @@ def login():
         restauranteop.configure(bd=40, bg="#765048")
 
         def messirve():
-          messagebox.showinfo(
-              "Caja", "El dinero de la caja es: " + str(entrada3.get()))
+            etiquetaventana3=tk.Label(restauranteop, text="Caja: El dinero de la caja es: "+ str(entrada3.get()), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+            etiquetaventana3.place(x=50,y=50)
+            etiquetaventana3.pack()
 
         def cambios():
           restauranteop.withdraw()
