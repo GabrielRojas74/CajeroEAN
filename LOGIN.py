@@ -33,7 +33,6 @@ while True:
         usuario.append(tipo)
         usuario.append(monto)
         usuario.append(usuario)
-        print("Ha sido resgistrado")
-        print(usuarios123455)
+        print("Has sido resgistrado")
         print(usuarios)
 #si se puede
