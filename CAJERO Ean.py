@@ -14,7 +14,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
     "ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
-####
+########
 usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213",
                                                                "banco", "1000"], ["admin", "clave", "parqueadero", "19999"], [" ", " ", " ", " "]]
 
@@ -26,7 +26,7 @@ def login():
   ventana.title("log in")
   ventana.geometry("700x600")
   ventana.config(bd=40, bg="#8A8A8A")
-  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",
+  loginto = Label(ventana, text="Ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",
                   25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
   loginto.pack(pady=20)
 
@@ -50,9 +50,9 @@ def login():
             break
           else:
               messagebox.showwarning(
-                  "intente de nuevo", "usuario o contraseña no validos")
+                  "Intente de nuevo", "Usuario o contraseña no validos")
 
-  boton3 = tk.Button(ventana, text="validar clave",
+  boton3 = tk.Button(ventana, text="Validar clave",
                      cursor="hand2", command=validar)
   boton3.pack(pady=20)
 
@@ -101,7 +101,7 @@ def login():
 
       botoncon.pack(pady=10)
 
-      def xfa100profe():
+      def ayudexfaprofe():
 
             banco.withdraw()
             bancop = tk.Toplevel()
@@ -142,10 +142,10 @@ def login():
           entrada200 = tk.Entry(bancop)
           entrada200.pack(pady=7)
 
-       def profe100():
+       def profe100xfa():
                 messagebox.askokcancel("Retirar", "Retirando monto")
                 messagebox.askokcancel(
-                    "Retirar", "Su retiro a sido registrado con exito")
+                    "Retirar", "Su retiro a sido registrado con éxito")
       boton2222 = Button(bancop, text="Siguiente ", font=(
               "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=profe100)
       boton2222.pack(padx=20, pady=30)
@@ -321,7 +321,7 @@ def login():
       Transferir.pack(pady=25)
       entrada3 = tk.Entry(restaurante)
       entrada3.pack()
-<<<<<<< Updated upstream
+    
       def opcionespar():
         restaurante.withdraw()
         restauranteop = tk.Toplevel()
@@ -407,8 +407,6 @@ def login():
       
     
 
-=======
->>>>>>> Stashed changes
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=(
