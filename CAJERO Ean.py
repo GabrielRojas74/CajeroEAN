@@ -71,11 +71,8 @@ def login():
     loginto2.pack(pady=20)
     #
 
-<<<<<<< Updated upstream
-=======
     dinero = 0
 
->>>>>>> Stashed changes
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
@@ -84,7 +81,6 @@ def login():
       banco.configure(bd=40, bg="#1586BF")
 
       def saldo():
-<<<<<<< Updated upstream
         print(lista)
         for a in range(0, 4):
             if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
@@ -92,7 +88,7 @@ def login():
                   break
         
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
-=======
+
             print(lista)
             for a in range(0, 4):
                   if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
@@ -100,11 +96,11 @@ def login():
                         break
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
                            bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED, command=saldo)
->>>>>>> Stashed changes
+
       botoncon.pack(pady=10)
 
       def xfa100profe():
-<<<<<<< Updated upstream
+
             banco.withdraw()
             bancop = tk.Toplevel()
             bancop.geometry("600x500")
@@ -131,7 +127,7 @@ def login():
 
           
       botonpar100 = Button(banco, text='retiro', font=("ARIAL", 15), fg="black", command=xfa100profe)
-=======
+
           banco.withdraw()
           bancop = tk.Toplevel()
           bancop.geometry("600x500")
@@ -155,7 +151,7 @@ def login():
 
       botonpar100 = Button(banco, text='retiro', font=(
           "ARIAL", 15), fg="black", command=xfa100profe)
->>>>>>> Stashed changes
+
       botonpar100.pack(padx=20, pady=30)
 
 
@@ -324,7 +320,8 @@ def login():
       Transferir.pack(pady=25)
       entrada3 = tk.Entry(restaurante)
       entrada3.pack()
-<<<<<<< Updated upstream
+
+    
       def opcionespar():
         restaurante.withdraw()
         restauranteop = tk.Toplevel()
@@ -410,8 +407,6 @@ def login():
       
     
 
-=======
->>>>>>> Stashed changes
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=(
