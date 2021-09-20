@@ -48,10 +48,15 @@ def login():
             lista.append(usuarios[a][1])
             break
           else:
-              etiquetaventana2=tk.Label(ventana, text="intente de nuevo, usuario o contraseña no validos", font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
-              etiquetaventana2.place(x=125,y=305)
+            cantidad = tk.Toplevel()
+            cantidad.geometry("400x400")
+            cantidad.title("cantidad")
+            cantidad.configure(bd=40, bg="#765048")
+            etiquetaventana2=tk.Label(cantidad, text="intente de nuevo, usuario o contraseña no validos", font=("ARIAL", 10), bg="blue", fg="black", width="40", height=5, bd=3, relief=RAISED)
+            etiquetaventana2.place(x=0,y=50)
+            break
 
-                
+
   boton3 = tk.Button(ventana, text="validar clave", cursor="hand2", command=validar)
   boton3.pack(pady=20)
 
@@ -81,7 +86,11 @@ def login():
         print(lista)
         for a in range(0, 4):
             if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
-                  etiquetaventana3=tk.Label(banco, text="Tu saldo es: "+str(usuarios[a][3]), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+                  cantidad = tk.Toplevel()
+                  cantidad.geometry("300x300")
+                  cantidad.title("cantidad")
+                  cantidad.configure(bd=40, bg="#765048")
+                  etiquetaventana3=tk.Label(cantidad, text="Tu saldo es: "+str(usuarios[a][3]), font=("ARIAL", 10), bg="blue", fg="black", width="40", height=5, bd=3, relief=RAISED)
                   etiquetaventana3.place(x=50,y=50)
                   etiquetaventana3.pack()
                   break
@@ -111,7 +120,11 @@ def login():
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  etiquetaventana3=tk.Label(bancop, text="Retiro exitoso, dinero restante: "+str(saldo), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+                  cantidad = tk.Toplevel()
+                  cantidad.geometry("300x300")
+                  cantidad.title("cantidad")
+                  cantidad.configure(bd=40, bg="#765048")
+                  etiquetaventana3=tk.Label(cantidad, text="Retiro exitoso, dinero restante: "+str(saldo), font=("ARIAL", 10), bg="blue", fg="black", width="40", height=5, bd=3, relief=RAISED)
                   etiquetaventana3.place(x=50,y=50)
                   etiquetaventana3.pack()
             boton2222= Button(bancop, text="Retirar ", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=profe100)
@@ -146,7 +159,11 @@ def login():
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  etiquetaventana3=tk.Label(bancoop, text="Transferencia exitosa, dinero restante: "+str(saldo), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+                  cantidad = tk.Toplevel()
+                  cantidad.geometry("300x300")
+                  cantidad.title("cantidad")
+                  cantidad.configure(bd=40, bg="#765048")
+                  etiquetaventana3=tk.Label(cantidad, text="Transferencia exitosa, dinero restante: "+str(saldo), font=("ARIAL", 10), bg="blue", fg="black", width="40", height=5, bd=3, relief=RAISED)
                   etiquetaventana3.place(x=50,y=50)
                   etiquetaventana3.pack()
             boton2222= Button(bancoop, text="Transferir", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=retiro)
@@ -283,7 +300,11 @@ def login():
         restauranteop.configure(bd=40, bg="#765048")
 
         def messirve():
-            etiquetaventana3=tk.Label(restauranteop, text="Caja: El dinero de la caja es: "+ str(entrada3.get()), font=("ARIAL", 10), bg="red", fg="black", width="40", height=5, bd=3, relief=RAISED)
+            cantidad = tk.Toplevel()
+            cantidad.geometry("300x300")
+            cantidad.title("cantidad")
+            cantidad.configure(bd=40, bg="#765048")
+            etiquetaventana3=tk.Label(cantidad, text="Caja: El dinero de la caja es: "+ str(entrada3.get()), font=("ARIAL", 10), bg="blue", fg="black", width="40", height=5, bd=3, relief=RAISED)
             etiquetaventana3.place(x=50,y=50)
             etiquetaventana3.pack()
 
