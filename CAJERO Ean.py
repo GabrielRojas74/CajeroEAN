@@ -68,28 +68,27 @@ def login():
     loginto2.pack(pady=20)
     #
 
+    dinero=0
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
+      
+      a=validar()
       for i in usuarios:
-        for x in range(0, 4):
-          dinero = i[3]
-
+            if (usuarios[i][0] == a[0] and usuarios[i][1] == a[1]):
+                  dinero=usuarios[i][3]
+                  
       def saldo():
-        messagebox.showinfo("Saldo", "Tu saldo es de " + str(dinero))
-
-      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
-                           bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED, command=saldo)
+        messagebox.showinfo("Saldo", "Tu saldo es de "+ str(dinero))
+      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
       botoncon.pack(pady=10)
+      
 
-      Retirar = Label(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
-                      bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-      Retirar.pack(pady=25)
-      messagebox.askokcancel("Retirar", "Retirando monto")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
 
@@ -111,17 +110,30 @@ def login():
 =======
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
                          25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+=======
+>>>>>>> e2223814ef079b1c54344db569714981ae33b3e4
 
-      botoncon = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
-                           bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED, command=banco2)
-      botoncon.pack(pady=10)
+      for fila in range(0,len(usuarios)):
+            cuanto=int(input("cuanto desea retirar: "))
+            usuarios[fila][2]=usuarios[fila][2]-cuanto
+            print("tu nuevo saldo es: ", usuarios[fila][2])
+      def retiro():
+            messagebox.askokcancel("Retirar", "Retirando monto")
+            messagebox.askokcancel("Retirar", "Tu nuevo saldo es: ", usuarios[fila][2])
+      botonc = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=retiro)
+      botonc.pack(pady=10)
+      
+      
 
+<<<<<<< HEAD
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
                                                                 25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
 >>>>>>> 846e7d44c45c4cf927938a1b0587558afaeb291a
+=======
+>>>>>>> e2223814ef079b1c54344db569714981ae33b3e4
 
-      Transferir.pack(pady=25)
 
+<<<<<<< HEAD
       
       
       
@@ -135,6 +147,14 @@ def login():
       
       
       
+=======
+
+      def trans():
+            messagebox.askquestion("Transferir", "¿Esta seguro de tranferirlo?")
+            messagebox.askokcancel("Transferir","Se envio el dinero")
+      botonc = tk.Button(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=trans)
+      botonc.pack(pady=10)
+>>>>>>> e2223814ef079b1c54344db569714981ae33b3e4
     def Parqueadero():
       entidades.withdraw()
       Parqueadero = tk.Toplevel()
