@@ -14,7 +14,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
     "ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
-#######
+####
 usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213",
                                                                "banco", "1000"], ["admin", "clave", "parqueadero", "19999"], [" ", " ", " ", " "]]
 
@@ -94,7 +94,7 @@ def login():
                          25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
 
       botoncon = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
-                           bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED, command=banco2)
+                           bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       botoncon.pack(pady=10)
 
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
@@ -135,6 +135,47 @@ def login():
           dinerocaja.pack(pady=25)
           dineroc = Label(cantidad,text=str(entrada3.get())) 
           dineroc.pack(pady=25)
+          dinero_de_caja = int(entrada3.get()) 
+          if (dinero_de_caja >= 100_000):
+            queda = dinero_de_caja//100_000
+            print(str(queda) + "billete\s de 100_000 pesos")
+            dinero_de_caja = dinero_de_caja % 100_000
+          if (dinero_de_caja >= 50_000):
+            queda = dinero_de_caja//50_000
+            print(str(queda) + "billete\s de 50_000 pesos")
+            dinero_de_caja = dinero_de_caja % 50_000
+          if (dinero_de_caja >= 20_000):
+            queda = dinero_de_caja//20_000
+            print(str(queda) + "billete\s de 20_000 pesos")
+            dinero_de_caja = dinero_de_caja % 20_000
+          if (dinero_de_caja >= 10_000):
+            queda = dinero_de_caja//10_000
+            print(str(queda) + "billete\s de 10_000 pesos")
+            dinero_de_caja = dinero_de_caja % 10_000
+          if (dinero_de_caja >= 5_000):
+            queda = dinero_de_caja//5_000
+            print(str(queda) + "billete\s de 5_000 pesos")
+            dinero_de_caja = dinero_de_caja % 5_000
+          if (dinero_de_caja >= 1_000):
+            queda = dinero_de_caja//1_000
+            print(str(queda) + "billete\s de 1_000 pesos")
+            dinero_de_caja = dinero_de_caja % 1_000
+          if (dinero_de_caja >= 500):
+            queda = dinero_de_caja//500
+            print(str(queda) + "moneda\s de 500 pesos")
+            dinero_de_caja = dinero_de_caja % 500
+          if (dinero_de_caja >= 200):
+            queda = dinero_de_caja//200
+            print(str(queda) + "moneda\s de 200 pesos")
+            dinero_de_caja = dinero_de_caja % 200
+          if (dinero_de_caja >= 100):
+            queda = dinero_de_caja//100
+            print(str(queda) + "moneda\s de 100 pesos")
+            dinero_de_caja = dinero_de_caja % 100
+          if (dinero_de_caja >= 10):
+            queda = dinero_de_caja//10
+            print(str(queda) + "moneda\s de 10 pesos")
+            dinero_de_caja = dinero_de_caja % 10
           
         
 

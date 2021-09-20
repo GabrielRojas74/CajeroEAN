@@ -24,7 +24,7 @@ while True:
                 break
     else:
         username=input("Digite usuario: ")#txt
-        contraseña=int(input("digite la contraseña: "))#txt
+        contraseña=int(input(("Digite la contraseña: "))#txt
         tipo=input("tipo: ")
         monto=int(input("Digite monto: "))
         usuario=[]
@@ -32,7 +32,7 @@ while True:
         usuario.append(contraseña)
         usuario.append(tipo)
         usuario.append(monto)
-        usuarios.append(usuario)
-        print("ha sido registrado")
+        usuario.append(usuario)
+        print("Has sido resgistrado")
         print(usuarios)
-#ahora si
+#si se puede
