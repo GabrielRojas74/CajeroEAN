@@ -14,7 +14,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
     "ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
-####
+#######
 usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213",
                                                                "banco", "1000"], ["admin", "clave", "parqueadero", "19999"], [" ", " ", " ", " "]]
 
