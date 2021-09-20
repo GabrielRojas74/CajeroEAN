@@ -28,6 +28,7 @@ A la hora de su comprobación y utilización del programa, gracias a la ayuda de
 El programa se puede manifestar graficamente de la siguiente manera
 
 ![image](https://user-images.githubusercontent.com/87994869/133958611-bd740d17-ea16-4ffd-959a-144aa3ca6302.png)
+![image](https://user-images.githubusercontent.com/87994869/133963758-e141c11e-f4cd-462b-b15c-f2919027d676.png)
 
 
 
