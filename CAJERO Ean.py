@@ -240,7 +240,7 @@ def login():
         def messirve():
           messagebox.showinfo("Caja", "El dinero de la caja es: "+ str(entrada3.get()))
         def cambios():
-          Parqueaderoop.withdraw()
+         restauranteop.withdraw()
           vueltas = tk.Toplevel()
           vueltas.geometry("600x500")
           vueltas.title("Vueltas")
