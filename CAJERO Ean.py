@@ -91,7 +91,7 @@ def login():
         
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
 
-            print(lista)
+                print(lista)
             for a in range(0, 4):
                   if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
                         messagebox.showinfo("Tu saldo es: ",usuarios[a][3])
@@ -321,7 +321,11 @@ def login():
       Transferir.pack(pady=25)
       entrada3 = tk.Entry(restaurante)
       entrada3.pack()
+<<<<<<< Updated upstream
     
+=======
+
+>>>>>>> Stashed changes
       def opcionespar():
         restaurante.withdraw()
         restauranteop = tk.Toplevel()
@@ -421,8 +425,7 @@ def login():
     #
 
 
-botonsig = Button(ventanain, text='Siguiente', cursor="hand2", font=(
-    "ARIAL", 15), fg="black", command=login)
+botonsig = Button(ventanain, text='Siguiente', cursor="hand2", font=("ARIAL", 15), fg="black", command=login)
 botonsig.pack(padx=20, pady=30)
 
 
