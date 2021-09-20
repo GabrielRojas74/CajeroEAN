@@ -101,6 +101,7 @@ def login():
       botonpar100 = Button(banco, text='retiro', font=("ARIAL", 15), fg="black", command=xfa100profe)
       botonpar100.pack(padx=20, pady=30)
       
+      
     def Parqueadero():
       entidades.withdraw()
       Parqueadero = tk.Toplevel()
@@ -247,17 +248,6 @@ def login():
       botonpar = Button(Parqueadero, text='Siguiente', font=("ARIAL", 15), fg="black", command=opcionespar)
       botonpar.pack(padx=20, pady=30)
       retiro = int(input("¿Cuanto desea retirar?: "))
-
-    
-      
-
-            
-      
-
-     
-
-
-
 ###
 
     def restaurante():

@@ -362,7 +362,7 @@ def login():
       botonpar = Button(restaurante, text='Siguiente', font=(
           "ARIAL", 20), fg="black", command=opcionespares)
       botonpar.pack(padx=20, pady=30)
-      retiro1 = int(input("¿Cuanto desea retirar?: "))
+      retiro = int(input("¿Cuanto desea retirar?: "))
 
     
 
