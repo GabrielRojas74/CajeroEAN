@@ -291,7 +291,7 @@ def login():
 
       botonpar = Button(Parqueadero, text='Siguiente', font=("ARIAL", 15), fg="black", command=opcionespar)
       botonpar.pack(padx=20, pady=30)
-      retiro = int(input("¿Cuanto desea retirar?: "))
+      
 ###
 
     def restaurante():
@@ -435,7 +435,7 @@ def login():
       botonpar = Button(restaurante, text='Siguiente', font=(
           "ARIAL", 20), fg="black", command=opcionespares)
       botonpar.pack(padx=20, pady=30)
-      retiro = int(input("¿Cuanto desea retirar?: "))
+      
 
       #
     botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
