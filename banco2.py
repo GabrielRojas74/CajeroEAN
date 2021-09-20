@@ -8,13 +8,13 @@ dinero=0
       
       
       def saldo():
-        messagebox.showinfo("Saldo", "Tu saldo es de 10.000.000")
+        messagebox.showinfo("Saldo", "Tu saldo es de: 10.000.000")
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
       botoncon.pack(pady=10)
       
 
 
-      def xfa100profe():
+      def xfa10profe():
             banco.withdraw()
             bancop = tk.Toplevel()
             bancop.geometry("600x500")
@@ -28,7 +28,7 @@ dinero=0
             entrada200.pack(pady=7)
             def profe100():
                   messagebox.askokcancel("Retirar", "Retirando monto")
-                  messagebox.askokcancel("Retirar", "Su retiro a sido registrado con exito")
+                  messagebox.askokcancel("Retirar", "Su retiro a sido registrado con éxito")
             boton2222= Button(bancop, text="Siguiente ", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=profe100)
             boton2222.pack(padx=20, pady=30)
             
