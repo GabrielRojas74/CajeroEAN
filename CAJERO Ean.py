@@ -64,7 +64,7 @@ def login():
     loginto2.pack(pady=20)
     #
 
-    dinero=0
+    #dinero=0
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
