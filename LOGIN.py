@@ -35,4 +35,4 @@ while True:
         usuario.append(usuario)
         print("Ha sido resgistrado")
         print(usuarios)               
-#ahora si
+#si se puede
