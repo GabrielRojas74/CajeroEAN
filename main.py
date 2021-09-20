@@ -244,9 +244,9 @@ def login():
           cantidades.geometry("300x300")
           cantidades.title("cantidad")
           cantidades.configure(bd=40, bg="#D4A373")
-          dinerocajas = Label(cantidad, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocajas = Label(cantidades, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
-          dineroca = Label(cantidad,text=str(entrada3.get())) 
+          dineroca = Label(cantidades,text=str(entrada3.get())) 
           dineroca.pack(pady=25)
           dinero_de_caja = int(entrada3.get()) 
           if (dinero_de_caja >= 100_000):
@@ -294,17 +294,17 @@ def login():
 
         
 
-        def cambio():
+        def cambios():
           restauranteop.withdraw()
           cambios = tk.Toplevel()
           cambios.geometry("600x500")
           cambios.title("Vueltas")
           cambios.configure(bd=40, bg="#00B4D8")
-          dinerocajas = Label(vueltas, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
-          cambioss = Label(vueltas,text=str(entrada4.get())) 
+          cambioss = Label(cambios,text=str(entrada4.get())) 
           cambioss.pack(pady=25)
-          retiro1= int(entrada4.get()) 
+          retiro= int(entrada4.get()) 
           dinero_de_caja = int(entrada3.get()) 
           if (retiro<=dinero_de_caja):
             if (retiro >= 100_000):
@@ -360,7 +360,7 @@ def login():
         cambiocaja.pack(padx=20, pady=30)
 
       botonpar = Button(restaurante, text='Siguiente', font=(
-          "ARIAL", 20), fg="black", command=opcionespar)
+          "ARIAL", 20), fg="black", command=opcionespares)
       botonpar.pack(padx=20, pady=30)
       retiro1 = int(input("¿Cuanto desea retirar?: "))
 
