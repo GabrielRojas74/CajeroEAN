@@ -11,12 +11,11 @@ ventanain.title("CAJERO EAN")
 ventanain.geometry('600x500')
 ventanain.config(bd=40, bg="#8A8A8A")
 
-etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
-    "ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
+etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
 ####
-usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213",
-                                                               "banco", "1000"], ["admin", "clave", "parqueadero", "19999"], [" ", " ", " ", " "]]
+usuarios = [["gabriel", "1234", "restaurante", "10_000_000"], ["ivan", "1213", "banco", "1000"], ["admin", "clave", "parqueadero", "19999"],[" "," "," "," "]]
+
 
 
 def login():
@@ -26,8 +25,7 @@ def login():
   ventana.title("log in")
   ventana.geometry("700x600")
   ventana.config(bd=40, bg="#8A8A8A")
-  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",
-                  25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
   loginto.pack(pady=20)
 
   #
@@ -42,14 +40,13 @@ def login():
 
   #
   def validar():
-      for a in range(0, 4):
+        for a in range(0, 4):
           if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
             entidades()
             break
           else:
-              messagebox.showwarning(
-                  "intente de nuevo", "usuario o contraseña no validos")
-
+              messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
+                
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
@@ -63,33 +60,32 @@ def login():
     entidades.geometry("600x500")
     entidades.title("Entidades")
     entidades.config(bd=40, bg="#8A8A8A")
-    loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",
-                     25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+    loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
     loginto2.pack(pady=20)
     #
 
-    dinero=0
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
-      
-      a=validar()
       for i in usuarios:
-            if (usuarios[i][0] == a[0] and usuarios[i][1] == a[1]):
-                  dinero=usuarios[i][3]
-                  
+        for x in range(0, 4):
+          dinero = i[3]
+
       def saldo():
         messagebox.showinfo("Saldo", "Tu saldo es de "+ str(dinero))
+
       botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
       botoncon.pack(pady=10)
       
 
+      Retirar = Label(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed", 25, BOLD),
+                        bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      Retirar.pack(pady=25)
+      messagebox.askokcancel("Retirar", "Retirando monto")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
 
       
@@ -107,33 +103,9 @@ def login():
       
       Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
                           25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-=======
-      Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
-                         25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-=======
->>>>>>> e2223814ef079b1c54344db569714981ae33b3e4
 
-      for fila in range(0,len(usuarios)):
-            cuanto=int(input("cuanto desea retirar: "))
-            usuarios[fila][2]=usuarios[fila][2]-cuanto
-            print("tu nuevo saldo es: ", usuarios[fila][2])
-      def retiro():
-            messagebox.askokcancel("Retirar", "Retirando monto")
-            messagebox.askokcancel("Retirar", "Tu nuevo saldo es: ", usuarios[fila][2])
-      botonc = tk.Button(banco, text="Retiro", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=retiro)
-      botonc.pack(pady=10)
-      
-      
+      Transferir.pack(pady=25)
 
-<<<<<<< HEAD
-      Transferir = Label(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",
-                                                                25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
->>>>>>> 846e7d44c45c4cf927938a1b0587558afaeb291a
-=======
->>>>>>> e2223814ef079b1c54344db569714981ae33b3e4
-
-
-<<<<<<< HEAD
       
       
       
@@ -147,14 +119,6 @@ def login():
       
       
       
-=======
-
-      def trans():
-            messagebox.askquestion("Transferir", "¿Esta seguro de tranferirlo?")
-            messagebox.askokcancel("Transferir","Se envio el dinero")
-      botonc = tk.Button(banco, text="Transferir dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=trans)
-      botonc.pack(pady=10)
->>>>>>> e2223814ef079b1c54344db569714981ae33b3e4
     def Parqueadero():
       entidades.withdraw()
       Parqueadero = tk.Toplevel()
@@ -162,24 +126,19 @@ def login():
       Parqueadero.title("Parqueadero EAN")
       Parqueadero.configure(bd=40, bg="#765048")
 
-      opciones = Label(Parqueadero, text="Digite el la cantidad que hay en la caja", font=(
-          "Bahnschrift SemiBold Condensed", 25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      opciones= Label(Parqueadero, text="Digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
       opciones.pack(pady=25)
-
+      
       entrada3 = tk.Entry(Parqueadero)
       entrada3.pack()
-
       def opcionespar():
         Parqueadero.withdraw()
         Parqueaderoop = tk.Toplevel()
         Parqueaderoop.geometry("600x500")
         Parqueaderoop.title("Parqueadero EAN")
         Parqueaderoop.configure(bd=40, bg="#765048")
-
         def sextosentido():
-          messagebox.showinfo(
-              "Caja", "El dinero de la caja es: " + str(entrada3.get()))
-
+          messagebox.showinfo("Caja", "El dinero de la caja es: "+ str(entrada3.get()))
         def cambiospues():
           Parqueaderoop.withdraw()
           vueltas = tk.Toplevel()
@@ -187,66 +146,82 @@ def login():
           vueltas.title("Vueltas")
           vueltas.configure(bd=40, bg="#765048")
           retiro=int(input("¿Cuanto desea retirar?: "))
-    if (entrada4<=entrada3):
-        dinero_de_caja=entrada3
-        
-        if (retiro>=100_000):
-            queda=retiro//100_000
-            print(str(queda)+ "billete\s de 100_000 pesos")
-            retiro=retiro % 100_000
-        if (retiro>=50_000):
-            queda=retiro//50_000
-            print(str(queda)+ "billete\s de 50_000 pesos")
-            retiro=retiro% 50_000
-        if (retiro>=20_000):
-            queda=retiro//20_000
-            print(str(queda)+ "billete\s de 20_000 pesos")
-            retiro= retiro % 20_000
-        if (retiro>=10_000):
-            queda=retiro//10_000
-            print(str(queda)+ "billete\s de 10_000 pesos")
-            retiro=retiro % 10_000
-        if (retiro>=5_000):
-            queda=retiro//5_000
-            print(str(queda)+ "billete\s de 5_000 pesos")
-            dretiro= retiro % 5_000
-        if (retiro>=1_000):
-            queda=retiro//1_000
-            print(str(queda)+ "billete\s de 1_000 pesos")
-            retiro=retiro % 1_000
-        if (retiro>=500):
-            queda=retiro//500
-            print(str(queda)+ "moneda\s de 500 pesos")
-            retiro=retiro % 500
-        if (retiro>=200):
-            queda=retiro//200
-            print(str(queda)+ "moneda\s de 200 pesos")
-            retiro=retiro % 200
-        if (retiro>=100):
-            queda=retiro//100
-            print(str(queda)+ "moneda\s de 100 pesos")
-            retiro=retiro % 100
-        if (retiro>=10):
-            queda=retiro//10
-            print(str(queda)+ "moneda\s de 10 pesos")
-            retiro=retiro % 10
-
-        dinerocaja = Button(Parqueaderoop, text='Dinero Caja', font=(
-            "ARIAL", 15), fg="black", command=sextosentido)
+          retiro=entrada4
+          if (retiro<=entrada3):
+            messagebox.showinfo("Vueltas", "Las vueltas son: "+ str(entrada3.get()))
+          if (retiro>=100_000):
+                queda=retiro//100_000
+                queda=Label(cambiospues,(str(queda))+ "billete\s de 100_000 pesos")
+                queda.pack()
+                retiro=retiro % 100_000 
+          if (retiro>=50_000):
+                queda=retiro//50_000
+                queda=Label(cambiospues,(str(queda))+ "billete\s de 50_000 pesos")
+                queda.pack()
+                retiro=retiro% 50_000
+          if (retiro>=20_000):
+                queda=retiro//20_000
+                queda=Label(cambiospues,(str(queda))+ "billete\s de 20_000 pesos")
+                queda.pack()
+                retiro= retiro % 20_000
+          if (retiro>=10_000):
+                queda=retiro//10_000
+                queda=Label(cambiospues,(str(queda))+ "billete\s de 10_000 pesos")
+                queda.pack()
+                retiro=retiro % 10_000
+          if (retiro>=5_000):
+                queda=retiro//5_000
+                queda=Label(cambiospues,(str(queda))+ "billete\s de 5_000 pesos")
+                queda.pack()
+                dretiro= retiro % 5_000
+          if (retiro>=1_000):
+                queda=retiro//1_000
+                queda=Label(cambiospues,(str(queda))+ "billete\s de 1_000 pesos")
+                queda.pack()
+                retiro=retiro % 1_000
+          if (retiro>=500):
+                queda=retiro//500
+                queda=Label(cambiospues,(str(queda))+ "moneda\s de 500 pesos")
+                queda.pack()
+                retiro=retiro % 500
+          if (retiro>=200):
+                queda=retiro//200
+                queda=Label(cambiospues,(str(queda))+ "moneda\s de 200 pesos")
+                queda.pack()
+                retiro=retiro % 200
+          if (retiro>=100):
+                queda=retiro//100
+                queda=Label(cambiospues,(str(queda))+ "moneda\s de 100 pesos")
+                queda.pack()
+                retiro=retiro % 100
+          if (retiro>=10):
+                queda=retiro//10
+                queda=Label(cambiospues,(str(queda))+ "moneda\s de 10 pesos")
+                queda.pack()
+                retiro=retiro % 10
+          
+        dinerocaja = Button(Parqueaderoop, text='Dinero Caja', font=("ARIAL", 15), fg="black", command=sextosentido)
         dinerocaja.pack(padx=20, pady=30)
-        dasda = tk.Label(Parqueaderoop, text="Digite el dinero para dar las vueltas", font=(
-            "ARIAL", 13), bg="#60A420", fg="black")
+        dasda = tk.Label(Parqueaderoop, text="Digite el dinero para dar las vueltas", font=("ARIAL", 13) ,bg="#60A420", fg="black")
         dasda.pack(pady=3, side=tk.TOP)
         entrada4 = tk.Entry(Parqueaderoop)
         entrada4.pack(pady=20)
-        devueltascaja = Button(Parqueaderoop, text="Siguiente ", font=(
-            "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=cambiospues)
+        devueltascaja= Button(Parqueaderoop, text="Siguiente ", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=cambiospues)
         devueltascaja.pack(padx=20, pady=30)
-
-      botonpar = Button(Parqueadero, text='Siguiente', font=(
-          "ARIAL", 15), fg="black", command=opcionespar)
+        
+        
+      botonpar = Button(Parqueadero, text='Siguiente', font=("ARIAL", 15), fg="black", command=opcionespar)
       botonpar.pack(padx=20, pady=30)
-      retiro = int(input("¿Cuanto desea retirar?: "))
+      retiro=int(input("¿Cuanto desea retirar?: "))
+    
+    
+      
+
+            
+      
+
+     
+
 
 
 ###
@@ -258,24 +233,25 @@ def login():
       restaurante.title("Restaurante EAN")
       restaurante.configure(bd=40, bg="#CD3618")
 
-      bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",
-                   25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+
+      bien = Label(restaurante, text="bienvenidos", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       bien.pack()
-      Transferir = Label(restaurante, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",
-                         25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+      Transferir = Label(restaurante, text="cuanto dinero", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       Transferir.pack(pady=25)
       entrada3 = tk.Entry(restaurante)
       entrada3.pack()
+      
+    
+
 
       #
-    botonbanco = tk.Button(entidades, text="Banco EAN", font=(
-        "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
+    botonbanco = tk.Button(entidades, text="Banco EAN", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
     botonbanco.pack(pady=10)
     botonparque = tk.Button(entidades, text="Parqueadero EAN", font=(
-        "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
+          "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
     botonparque.pack(pady=10)
     botonres = tk.Button(entidades, text="Restaurante EAN", font=(
-        "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
+          "Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
     botonres.pack(pady=10)
     #
 
