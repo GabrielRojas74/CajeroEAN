@@ -1,295 +1,103 @@
 
 
-      opciones = Label(Parqueadero, text="Digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed", 25, BOLD), bg="orange", fg="#00FFFF", width="40", height=2, bd=8, relief=RAISED)
-      opciones.pack(pady=25)
-
-      entrada3 = tk.Entry(Parqueadero)
-      entrada3.pack()
-
-      def opcionespar():
-        Parqueadero.withdraw()
-        Parqueaderoop = tk.Toplevel()
-        Parqueaderoop.geometry("600x500")
-        Parqueaderoop.title("Parqueadero EAN")
-        Parqueaderoop.configure(bd=40, bg="#00c3d3")
-
-        def sextosentido():
-          cantidad=tk.Toplevel()
-          cantidad.geometry("300x300")
-          cantidad.title("cantidad")
-          cantidad.configure(bd=40, bg="#765048")
-          dinerocaja = Label(cantidad, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-          dinerocaja.pack(pady=25)
-          dineroc = Label(cantidad,text=str(entrada3.get())) 
-          dineroc.pack(pady=25)
-          dinero_de_caja = int(entrada3.get()) 
-          
-          if (dinero_de_caja >= 100_000):
-            queda = dinero_de_caja//100_000
-            print(str(queda) + "billete\s de 100_000 pesos")
-            dinero_de_caja = dinero_de_caja % 100_000
-          if (dinero_de_caja >= 50_000):
-            queda = dinero_de_caja//50_000
-            print(str(queda) + "billete\s de 50_000 pesos")
-            dinero_de_caja = dinero_de_caja % 50_000
-          if (dinero_de_caja >= 20_000):
-            queda = dinero_de_caja//20_000
-            print(str(queda) + "billete\s de 20_000 pesos")
-            dinero_de_caja = dinero_de_caja % 20_000
-          if (dinero_de_caja >= 10_000):
-            queda = dinero_de_caja//10_000
-            print(str(queda) + "billete\s de 10_000 pesos")
-            dinero_de_caja = dinero_de_caja % 10_000
-          if (dinero_de_caja >= 5_000):
-            queda = dinero_de_caja//5_000
-            print(str(queda) + "billete\s de 5_000 pesos")
-            dinero_de_caja = dinero_de_caja % 5_000
-          if (dinero_de_caja >= 1_000):
-            queda = dinero_de_caja//1_000
-            print(str(queda) + "billete\s de 1_000 pesos")
-            dinero_de_caja = dinero_de_caja % 1_000
-          if (dinero_de_caja >= 500):
-            queda = dinero_de_caja//500
-            print(str(queda) + "moneda\s de 500 pesos")
-            dinero_de_caja = dinero_de_caja % 500
-          if (dinero_de_caja >= 200):
-            queda = dinero_de_caja//200
-            print(str(queda) + "moneda\s de 200 pesos")
-            dinero_de_caja = dinero_de_caja % 200
-          if (dinero_de_caja >= 100):
-            queda = dinero_de_caja//100
-            print(str(queda) + "moneda\s de 100 pesos")
-            dinero_de_caja = dinero_de_caja % 100
-          if (dinero_de_caja >= 10):
-            queda = dinero_de_caja//10
-            print(str(queda) + "moneda\s de 10 pesos")
-            dinero_de_caja = dinero_de_caja % 10
-  
-        def cambiospues():
-          Parqueaderoop.withdraw()
-          vueltas = tk.Toplevel()
-          vueltas.geometry("400x300")
-          vueltas.title("Vueltas")
-          vueltas.configure(bd=40, bg="#765048")
-          dinerocaja = Label(vueltas, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 18, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-          dinerocaja.pack(pady=25)
-          vueltass = Label(vueltas,text=int(entrada4.get())) 
-          vueltass.pack(pady=25)
-          retiro= int(entrada4.get()) 
-          dinero_de_caja = int(entrada3.get()) 
-          if (retiro<=dinero_de_caja):
-            if (retiro >= 100_000):
-              queda = retiro//100_000
-              print(str(queda) + "billete\s de 100_000 pesos")
-              retiro = retiro % 100_000
-            if (retiro >= 50_000):
-              queda = retiro//50_000
-              print(str(queda) + "billete\s de 50_000 pesos")
-              retiro = retiro % 50_000
-            if (retiro >= 20_000):
-              queda = retiro//20_000
-              print(str(queda) + "billete\s de 20_000 pesos")
-              retiro = retiro % 20_000
-            if (retiro >= 10_000):
-              queda = retiro//10_000
-              print(str(queda) + "billete\s de 10_000 pesos")
-              retiro = retiro % 10_000
-            if (retiro >= 5_000):
-              queda = retiro//5_000
-              print(str(queda) + "billete\s de 5_000 pesos")
-              retiro = retiro % 5_000
-            if (retiro >= 1_000):
-              queda = retiro//1_000
-              print(str(queda) + "billete\s de 1_000 pesos")
-              retiro = retiro % 1_000
-            if (retiro >= 500):
-              queda = retiro//500
-              print(str(queda) + "moneda\s de 500 pesos")
-              retiro = retiro % 500
-            if (retiro >= 200):
-              queda = retiro//200
-              print(str(queda) + "moneda\s de 200 pesos")
-              retiro = retiro % 200
-            if (retiro >= 100):
-              queda = retiro//100
-              print(str(queda) + "moneda\s de 100 pesos")
-              retiro = retiro % 100
-            if (retiro >= 10):
-              queda = retiro//10
-              print(str(queda) + "moneda\s de 10 pesos")
-              retiro = retiro % 10
-            resultado=dinero_de_caja-retiro
-            print("El dinero que queda en la caja es ", resultado)
-         
-          
-        dinerocaja = Button(Parqueaderoop, text='DINERO CAJA', font=("Bahnschrift SemiBold Condensed", 30), bg="#8d9bd7", fg="black", command=sextosentido)
-        dinerocaja.pack(padx=20, pady=30)
-        dasda = tk.Label(Parqueaderoop, text="Digite el dinero para dar las vueltas", font=("ARIAL", 13), bg="#a1ffff", fg="black")
-        dasda.pack(pady=3, side=tk.TOP)
-        entrada4 = tk.Entry(Parqueaderoop)
-        entrada4.pack(pady=20)
-        devueltascaja = Button(Parqueaderoop, text="Siguiente ", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=cambiospues)
-        devueltascaja.pack(padx=20, pady=30)
-
-      botonpar = Button(Parqueadero, text='Siguiente', font=("ARIAL", 15), fg="black", command=opcionespar)
-      botonpar.pack(padx=20, pady=30)
-      retiro = int(input("¿Cuanto desea retirar?: "))
-      
-###
-
-    def restaurante():
-      entidades.withdraw()
-      restaurante = tk.Toplevel()
-      restaurante.geometry("600x500")
-      restaurante.title("Restaurante EAN")
-      restaurante.configure(bd=40, bg="#0CBABA")
-
-      opciones = Label(restaurante, text="Digite la cantidad de dinero que hay en la caja", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-      opciones.pack(pady=25)
-
-      entrada3 = tk.Entry(restaurante)
-      entrada3.pack()
-
-      def opcionespares():
-        restaurante.withdraw()
-        restauranteop = tk.Toplevel()
-        restauranteop.geometry("600x500")
-        restauranteop.title("Restaurante EAN")
-        restauranteop.configure(bd=40, bg="#01BAEF")
-
-        def messirve():
-          cantidades=tk.Toplevel()
-          cantidades.geometry("300x300")
-          cantidades.title("cantidad")
-          cantidades.configure(bd=40, bg="#D4A373")
-          dinerocajas = Label(cantidades, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-          dinerocajas.pack(pady=25)
-          dineroca = Label(cantidades,text=str(entrada3.get())) 
-          dineroca.pack(pady=25)
-          dinero_de_caja = int(entrada3.get()) 
-          if (dinero_de_caja >= 100_000):
-            queda = dinero_de_caja//100_000
-            print(str(queda) + "billete\s de 100_000 pesos")
-            dinero_de_caja = dinero_de_caja % 100_000
-          if (dinero_de_caja >= 50_000):
-            queda = dinero_de_caja//50_000
-            print(str(queda) + "billete\s de 50_000 pesos")
-            dinero_de_caja = dinero_de_caja % 50_000
-          if (dinero_de_caja >= 20_000):
-            queda = dinero_de_caja//20_000
-            print(str(queda) + "billete\s de 20_000 pesos")
-            dinero_de_caja = dinero_de_caja % 20_000
-          if (dinero_de_caja >= 10_000):
-            queda = dinero_de_caja//10_000
-            print(str(queda) + "billete\s de 10_000 pesos")
-            dinero_de_caja = dinero_de_caja % 10_000
-          if (dinero_de_caja >= 5_000):
-            queda = dinero_de_caja//5_000
-            print(str(queda) + "billete\s de 5_000 pesos")
-            dinero_de_caja = dinero_de_caja % 5_000
-          if (dinero_de_caja >= 1_000):
-            queda = dinero_de_caja//1_000
-            print(str(queda) + "billete\s de 1_000 pesos")
-            dinero_de_caja = dinero_de_caja % 1_000
-          if (dinero_de_caja >= 500):
-            queda = dinero_de_caja//500
-            print(str(queda) + "moneda\s de 500 pesos")
-            dinero_de_caja = dinero_de_caja % 500
-          if (dinero_de_caja >= 200):
-            queda = dinero_de_caja//200
-            print(str(queda) + "moneda\s de 200 pesos")
-            dinero_de_caja = dinero_de_caja % 200
-          if (dinero_de_caja >= 100):
-            queda = dinero_de_caja//100
-            print(str(queda) + "moneda\s de 100 pesos")
-            dinero_de_caja = dinero_de_caja % 100
-          if (dinero_de_caja >= 10):
-            queda = dinero_de_caja//10
-            print(str(queda) + "moneda\s de 10 pesos")
-            dinero_de_caja = dinero_de_caja % 10
-          
-
-        def cambios():
-          restauranteop.withdraw()
-          cambios = tk.Toplevel()
-          cambios.geometry("360x300")
-          cambios.title("Vueltas")
-          cambios.configure(bd=40, bg="#00B4D8")
-          dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-          dinerocajas.pack(pady=25)
-          cambioss = Label(cambios,text=str(entrada4.get())) 
-          cambioss.pack(pady=25)
-          retiro= int(entrada4.get()) 
-          dinero_de_caja = int(entrada3.get()) 
-          if (retiro<=dinero_de_caja):
-            if (retiro >= 100_000):
-              queda = retiro//100_000
-              print(str(queda) + "billete\s de 100_000 pesos")
-              retiro = retiro % 100_000
-            if (retiro >= 50_000):
-              queda = retiro//50_000
-              print(str(queda) + "billete\s de 50_000 pesos")
-              retiro = retiro % 50_000
-            if (retiro >= 20_000):
-              queda = retiro//20_000
-              print(str(queda) + "billete\s de 20_000 pesos")
-              retiro = retiro % 20_000
-            if (retiro >= 10_000):
-              queda = retiro//10_000
-              print(str(queda) + "billete\s de 10_000 pesos")
-              retiro = retiro % 10_000
-            if (retiro >= 5_000):
-              queda = retiro//5_000
-              print(str(queda) + "billete\s de 5_000 pesos")
-              retiro = retiro % 5_000
-            if (retiro >= 1_000):
-              queda = retiro//1_000
-              print(str(queda) + "billete\s de 1_000 pesos")
-              retiro = retiro % 1_000
-            if (retiro >= 500):
-              queda = retiro//500
-              print(str(queda) + "moneda\s de 500 pesos")
-              retiro = retiro % 500
-            if (retiro >= 200):
-              queda = retiro//200
-              print(str(queda) + "moneda\s de 200 pesos")
-              retiro = retiro % 200
-            if (retiro >= 100):
-              queda = retiro//100
-              print(str(queda) + "moneda\s de 100 pesos")
-              retiro = retiro % 100
-            if (retiro >= 10):
-              queda = retiro//10
-              print(str(queda) + "moneda\s de 10 pesos")
-              retiro = retiro % 10
-            resultado=dinero_de_caja-retiro
-            print("El dinero que queda en la caja es ", resultado)
-        dinerocajas = Button(restauranteop, text='Dinero Caja', font=("ARIAL", 20), fg="black", command=messirve)
-        dinerocajas.pack(padx=20, pady=30)
-        nea = tk.Label(restauranteop, text="Digite el dinero para dar el cambio", font=("ARIAL", 15), bg="#F77F00", fg="black")
-        nea.pack(pady=3, side=tk.TOP)
-        entrada4 = tk.Entry(restauranteop)
-        entrada4.pack(pady=20)
-        cambiocaja = Button(restauranteop, text="Siguiente ", font=(
-            "Bahnschrift SemiBold Condensed", 30, ITALIC, BOLD), command=cambios)
-        cambiocaja.pack(padx=20, pady=30)
-
-      botonpar = Button(restaurante, text='Siguiente', font=("ARIAL", 20), fg="black", command=opcionespares)
-      botonpar.pack(padx=20, pady=30)
-      retiro = int(input("¿Cuanto desea retirar?: "))
-
-      #
-    botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
-    botonbanco.pack(pady=10)
-    botonparque = tk.Button(entidades, text="Parqueadero EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
-    botonparque.pack(pady=10)
-    botonres = tk.Button(entidades, text="Restaurante EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
-    botonres.pack(pady=10)
-    #
+      #solo se puede consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente. Se necesita tener un inventario de los billetes y monedas que hay en la caja.
+dinero_de_caja=2_456_850
 
 
-botonsig = Button(ventanain, text='Siguiente', cursor="hand2", font=("ARIAL", 15), fg="black", command=login)
-botonsig.pack(padx=20, pady=30)
+opcion=int(input(("¿Que desea hacer? Presione 1 para consultar el dinero de la caja, 2 para dar las vueltas al cliente ")))
+if (opcion==1):
+        print("El dinero en la caja es de ",dinero_de_caja)
+        if (dinero_de_caja>=100_000):
+            queda=dinero_de_caja//100_000
+            print(str(queda)+ "billete\s de 100_000 pesos")
+            dinero_de_caja= dinero_de_caja % 100_000
+        if (dinero_de_caja>=50_000):
+            queda=dinero_de_caja//50_000
+            print(str(queda)+ "billete\s de 50_000 pesos")
+            dinero_de_caja= dinero_de_caja % 50_000
+        if (dinero_de_caja>=20_000):
+            queda=dinero_de_caja//20_000
+            print(str(queda)+ "billete\s de 20_000 pesos")
+            dinero_de_caja= dinero_de_caja % 20_000
+        if (dinero_de_caja>=10_000):
+            queda=dinero_de_caja//10_000
+            print(str(queda)+ "billete\s de 10_000 pesos")
+            dinero_de_caja= dinero_de_caja % 10_000
+        if (dinero_de_caja>=5_000):
+            queda=dinero_de_caja//5_000
+            print(str(queda)+ "billete\s de 5_000 pesos")
+            dinero_de_caja= dinero_de_caja % 5_000
+        if (dinero_de_caja>=1_000):
+            queda=dinero_de_caja//1_000
+            print(str(queda)+ "billete\s de 1_000 pesos")
+            dinero_de_caja= dinero_de_caja % 1_000
+        if (dinero_de_caja>=500):
+            queda=dinero_de_caja//500
+            print(str(queda)+ "moneda\s de 500 pesos")
+            dinero_de_caja= dinero_de_caja % 500
+        if (dinero_de_caja>=200):
+            queda=dinero_de_caja//200
+            print(str(queda)+ "moneda\s de 200 pesos")
+            dinero_de_caja= dinero_de_caja % 200
+        if (dinero_de_caja>=100):
+            queda=dinero_de_caja//100
+            print(str(queda)+ "moneda\s de 100 pesos")
+            dinero_de_caja= dinero_de_caja % 100
+        if (dinero_de_caja>=10):
+            queda=dinero_de_caja//10
+            print(str(queda)+ "moneda\s de 10 pesos")
+            dinero_de_caja= dinero_de_caja % 10
+            print("Gracias por usar y confiar en cajeroEAN")
+elif (opcion==2):
+    retiro=int(input("¿Cuanto desea retirar?: "))
+    if (retiro<=dinero_de_caja):
+        print("Se han retirado: ",retiro)
+        dinero_de_caja=dinero_de_caja-retiro
+        print("los billtes a dar son: ")
+        if (retiro>=100_000):
+            queda=retiro//100_000
+            print(str(queda)+ "billete\s de 100_000 pesos")
+            retiro=retiro % 100_000
+        if (retiro>=50_000):
+            queda=retiro//50_000
+            print(str(queda)+ "billete\s de 50_000 pesos")
+            retiro=retiro% 50_000
+        if (retiro>=20_000):
+            queda=retiro//20_000
+            print(str(queda)+ "billete\s de 20_000 pesos")
+            retiro= retiro % 20_000
+        if (retiro>=10_000):
+            queda=retiro//10_000
+            print(str(queda)+ "billete\s de 10_000 pesos")
+            retiro=retiro % 10_000
+        if (retiro>=5_000):
+            queda=retiro//5_000
+            print(str(queda)+ "billete\s de 5_000 pesos")
+            dretiro= retiro % 5_000
+        if (retiro>=1_000):
+            queda=retiro//1_000
+            print(str(queda)+ "billete\s de 1_000 pesos")
+            retiro=retiro % 1_000
+        if (retiro>=500):
+            queda=retiro//500
+            print(str(queda)+ "moneda\s de 500 pesos")
+            retiro=retiro % 500
+        if (retiro>=200):
+            queda=retiro//200
+            print(str(queda)+ "moneda\s de 200 pesos")
+            retiro=retiro % 200
+        if (retiro>=100):
+            queda=retiro//100
+            print(str(queda)+ "moneda\s de 100 pesos")
+            retiro=retiro % 100
+        if (retiro>=10):
+            queda=retiro//10
+            print(str(queda)+ "moneda\s de 10 pesos")
+            retiro=retiro % 10
+        print("queda ", dinero_de_caja, "en la caja")
+        print("Gracias por usar y confiar en cajeroEAN")
+    else:
+        print("La caja no posee tal cantidad de dinero")
+        print("Gracias por usar y confiar en cajeroEAN")
 
 
-ventanain.mainloop()
