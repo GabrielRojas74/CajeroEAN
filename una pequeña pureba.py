@@ -1,103 +1,76 @@
+frutas = open('frutas.txt', 'r')
+numeros= open('numeros.txt','r')
+lista_frutas=[]#Llenar las lista con los datos del archivo frutas.txt
+lista_numeros=[]#Llenar las lista con los datos del archivo numeros.txt
 
+#Realizar una funcion que elimine un caracter de todos los elementos de la lista
+"""
+Entradas:
+Salidas
+"""
+def eliminar_un_caracter_de_toda_la_lista(lista):
+ pass
+#Realizar una funcion que retorne la copia de una funcion que pasa por parametro 
+"""
+Entradas:
+Salidas
+"""
+def copia_lista(lista):
+  return lista.copy() 
+#Realizar una funcion que retorne una lista de numeros enteros   
+"""
+Entradas:
+Salidas
+"""  
+def numeros_pares():
+  pass#RetornaUnaLista
+#Realizar una funcion que elimine un elemento de una lista
+"""
+Entradas:
+Salidas
+"""  
+def elimina_elemento_lista():
+  pass#RetornaUnaLista 
 
-      #solo se puede consultar el dinero que hay en la caja y retirarlo para darle las vueltas al cliente. Se necesita tener un inventario de los billetes y monedas que hay en la caja.
-dinero_de_caja=2_456_850
-
-
-opcion=int(input(("¿Que desea hacer? Presione 1 para consultar el dinero de la caja, 2 para dar las vueltas al cliente ")))
-if (opcion==1):
-        print("El dinero en la caja es de ",dinero_de_caja)
-        if (dinero_de_caja>=100_000):
-            queda=dinero_de_caja//100_000
-            print(str(queda)+ "billete\s de 100_000 pesos")
-            dinero_de_caja= dinero_de_caja % 100_000
-        if (dinero_de_caja>=50_000):
-            queda=dinero_de_caja//50_000
-            print(str(queda)+ "billete\s de 50_000 pesos")
-            dinero_de_caja= dinero_de_caja % 50_000
-        if (dinero_de_caja>=20_000):
-            queda=dinero_de_caja//20_000
-            print(str(queda)+ "billete\s de 20_000 pesos")
-            dinero_de_caja= dinero_de_caja % 20_000
-        if (dinero_de_caja>=10_000):
-            queda=dinero_de_caja//10_000
-            print(str(queda)+ "billete\s de 10_000 pesos")
-            dinero_de_caja= dinero_de_caja % 10_000
-        if (dinero_de_caja>=5_000):
-            queda=dinero_de_caja//5_000
-            print(str(queda)+ "billete\s de 5_000 pesos")
-            dinero_de_caja= dinero_de_caja % 5_000
-        if (dinero_de_caja>=1_000):
-            queda=dinero_de_caja//1_000
-            print(str(queda)+ "billete\s de 1_000 pesos")
-            dinero_de_caja= dinero_de_caja % 1_000
-        if (dinero_de_caja>=500):
-            queda=dinero_de_caja//500
-            print(str(queda)+ "moneda\s de 500 pesos")
-            dinero_de_caja= dinero_de_caja % 500
-        if (dinero_de_caja>=200):
-            queda=dinero_de_caja//200
-            print(str(queda)+ "moneda\s de 200 pesos")
-            dinero_de_caja= dinero_de_caja % 200
-        if (dinero_de_caja>=100):
-            queda=dinero_de_caja//100
-            print(str(queda)+ "moneda\s de 100 pesos")
-            dinero_de_caja= dinero_de_caja % 100
-        if (dinero_de_caja>=10):
-            queda=dinero_de_caja//10
-            print(str(queda)+ "moneda\s de 10 pesos")
-            dinero_de_caja= dinero_de_caja % 10
-            print("Gracias por usar y confiar en cajeroEAN")
-elif (opcion==2):
-    retiro=int(input("¿Cuanto desea retirar?: "))
-    if (retiro<=dinero_de_caja):
-        print("Se han retirado: ",retiro)
-        dinero_de_caja=dinero_de_caja-retiro
-        print("los billtes a dar son: ")
-        if (retiro>=100_000):
-            queda=retiro//100_000
-            print(str(queda)+ "billete\s de 100_000 pesos")
-            retiro=retiro % 100_000
-        if (retiro>=50_000):
-            queda=retiro//50_000
-            print(str(queda)+ "billete\s de 50_000 pesos")
-            retiro=retiro% 50_000
-        if (retiro>=20_000):
-            queda=retiro//20_000
-            print(str(queda)+ "billete\s de 20_000 pesos")
-            retiro= retiro % 20_000
-        if (retiro>=10_000):
-            queda=retiro//10_000
-            print(str(queda)+ "billete\s de 10_000 pesos")
-            retiro=retiro % 10_000
-        if (retiro>=5_000):
-            queda=retiro//5_000
-            print(str(queda)+ "billete\s de 5_000 pesos")
-            dretiro= retiro % 5_000
-        if (retiro>=1_000):
-            queda=retiro//1_000
-            print(str(queda)+ "billete\s de 1_000 pesos")
-            retiro=retiro % 1_000
-        if (retiro>=500):
-            queda=retiro//500
-            print(str(queda)+ "moneda\s de 500 pesos")
-            retiro=retiro % 500
-        if (retiro>=200):
-            queda=retiro//200
-            print(str(queda)+ "moneda\s de 200 pesos")
-            retiro=retiro % 200
-        if (retiro>=100):
-            queda=retiro//100
-            print(str(queda)+ "moneda\s de 100 pesos")
-            retiro=retiro % 100
-        if (retiro>=10):
-            queda=retiro//10
-            print(str(queda)+ "moneda\s de 10 pesos")
-            retiro=retiro % 10
-        print("queda ", dinero_de_caja, "en la caja")
-        print("Gracias por usar y confiar en cajeroEAN")
-    else:
-        print("La caja no posee tal cantidad de dinero")
-        print("Gracias por usar y confiar en cajeroEAN")
-
-
+#Retorna una lista con las palabras iniciales con la letra que pasa por parametro  
+"""
+Entradas:
+Salidas
+"""  
+def letra():
+  pass  
+#Realizar una funcion que retorne el tamaño de una lista   
+"""
+Entradas:
+Salidas
+"""   
+def tamano_lista():
+  pass #RetornaUnEntero
+#Retorna el tamaño de la lista y que tipo de datos estan dentro de la lista
+"""
+Entradas:
+Salidas
+"""  
+def informacion_lista():
+  pass
+#Retornar una lista con los numero negativos  
+"""
+Entradas:
+Salidas
+"""  
+def numeros_negativos(lista):
+  pass
+#realizar una funcion que retorne la posicion de un elemento que pasa por parametro
+def posicion_elemento(elemento):
+  pass
+#realizar una funcion que agregue al final de archivo frutas una fruta
+def frutas(elemento):
+  pass
+#Realizar una funcion que cuente el numero de veces que se repite un elemento  
+def repetir(elemento):
+  pass
+  
+if __name__ == "__main__":
+  lista=[1,2,3,4,4]
+  copy=copia_lista(lista)
+  print(copy)
