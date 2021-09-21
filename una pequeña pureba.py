@@ -41,19 +41,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
       botoncon.pack(pady=10)
       
 
-
-      def xfa100profe():
-            banco.withdraw()
-            bancop = tk.Toplevel()
-            bancop.geometry("600x500")
-            bancop.title("Retiro EAN")
-            bancop.configure(bd=40, bg="#765048")
-            reti= Label(bancop, text="Digite el la cantidad que quiere retirar", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
-            reti.pack(pady=25)
-            clavecd= tk.Label(bancop, text="Monto:", bg="#60A420", fg="black")
-            clavecd.pack(pady=3, side=tk.TOP)
-            entrada200 = tk.Entry(bancop)
-            
+adasd wa D aw 
             entrada200.pack(pady=7)
             saldo=0
             def profe100():
