@@ -50,8 +50,7 @@ def login():
             break
           else:
               messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
-
-                
+   
   boton3 = tk.Button(ventana, text="validar clave", command=validar)
   boton3.pack(pady=20)
 
@@ -75,7 +74,6 @@ def login():
       banco.geometry("600x500")
       banco.title("Banco EAN")
       banco.configure(bd=40, bg="#1586BF")
-      
       
       def saldo():
         print(lista)
