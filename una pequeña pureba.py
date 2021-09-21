@@ -21,33 +21,7 @@ ventanain.config(bd=40, bg="#8A8A8A")
   entrada2 = tk.Entry(ventana)
   entrada2.pack(pady=7)
 
-  #
-  lista=[]
-  def validar():
-        for a in range(0, 4):
-          if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
-            entidades()
-            lista.append(usuarios[a][0])
-            lista.append(usuarios[a][1])
-            break
-          else:
-              messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
-
-                
-  #dasdfiojsa0iojfd kokisdfokwajkrfaaaaaaaaaaaaaaaaaaaaaaaakdaosdpsap'0do a¿od'SVIDO'0PASO¿CDP0AS´'0CD'P´0SADCsp'0cipjsdodfjISJDFIO´0SDÓSAJDJISDFJIO´SDIFOSEDSDOIPJSAPODFPO+IKOI  PO´PIK´PIKRFGKPOFKSDOKFPIKP´SDFKP+OSKPKF+ÁOS
-  dedkawpk
-  dwkadp'
-
-  def entidades():
-    ventana.withdraw()
-    entidades = tk.Toplevel()
-    entidades.geometry("600x500")
-    entidades.title("Entidades")
-    entidades.config(bd=40, bg="#8A8A8A")
-    loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-    loginto2.pack(pady=20)
-    
-    
+ 
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
