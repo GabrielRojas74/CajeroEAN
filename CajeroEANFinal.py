@@ -305,8 +305,8 @@ def login():
       opciones = Label(restaurante, text="Digite la cantidad de dinero que hay en la caja", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       opciones.pack(pady=25)
 
-      entrada3 = tk.Entry(restaurante)
-      entrada3.pack()
+      entradas = tk.Entry(restaurante)
+      entradas.pack()
 
       def opcionespares():
         restaurante.withdraw()
@@ -320,11 +320,11 @@ def login():
           cantidades.geometry("300x300")
           cantidades.title("cantidad")
           cantidades.configure(bd=40, bg="#D4A373")
-          dinerocajas = Label(cantidades, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocajas = Label(cantidades, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
-          dineroca = Label(cantidades,text=str(entrada3.get())) 
+          dineroca = Label(cantidades,text=str(entradas.get())) 
           dineroca.pack(pady=25)
-          dinero_de_caja = int(entrada3.get()) 
+          dinero_de_caja = int(entradas.get()) 
           if (dinero_de_caja >= 100_000):
             queda = dinero_de_caja//100_000
             print(str(queda) + "billete\s de 100_000 pesos")
@@ -373,12 +373,12 @@ def login():
           cambios.geometry("360x300")
           cambios.title("Vueltas")
           cambios.configure(bd=40, bg="#00B4D8")
-          dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
-          cambioss = Label(cambios,text=str(entrada4.get())) 
+          cambioss = Label(cambios,text=str(entradass.get())) 
           cambioss.pack(pady=25)
-          retiro= int(entrada4.get()) 
-          dinero_de_caja = int(entrada3.get()) 
+          retiro= int(entradass.get()) 
+          dinero_de_caja = int(entradas.get()) 
           if (retiro<=dinero_de_caja):
             if (retiro >= 100_000):
               queda = retiro//100_000
@@ -422,17 +422,16 @@ def login():
               retiro = retiro % 10
             resultado=dinero_de_caja-retiro
             print("El dinero que queda en la caja es ", resultado)
-        dinerocajas = Button(restauranteop, text='Dinero Caja', font=("ARIAL", 20), fg="black", command=messirve)
+        dinerocajas = Button(restauranteop, text='Dinero en Caja', font=("ARIAL", 25, BOLD), bg="#FFFC50", fg="black", command=messirve)
         dinerocajas.pack(padx=20, pady=30)
         nea = tk.Label(restauranteop, text="Digite el dinero para dar el cambio", font=("ARIAL", 15), bg="#F77F00", fg="black")
         nea.pack(pady=3, side=tk.TOP)
-        entrada4 = tk.Entry(restauranteop)
-        entrada4.pack(pady=20)
-        cambiocaja = Button(restauranteop, text="Siguiente ", font=(
-            "Bahnschrift SemiBold Condensed", 30, ITALIC, BOLD), command=cambios)
+        entradass = tk.Entry(restauranteop)
+        entradass.pack(pady=20)
+        cambiocaja = Button(restauranteop, text="Siguiente ", font=("Bahnschrift SemiBold Condensed", 30, ITALIC, BOLD), bg="#f4eb8f", command=cambios)
         cambiocaja.pack(padx=20, pady=30)
 
-      botonpar = Button(restaurante, text='Siguiente', font=("ARIAL", 20), fg="black", command=opcionespares)
+      botonpar = Button(restaurante, text='Siguiente', font=("Bahnschrift SemiBold Condensed", 30, ITALIC, BOLD), bg="#f4eb8f", fg="black", command=opcionespares)
       botonpar.pack(padx=20, pady=30)
       retiro = int(input("¿Cuanto desea retirar?: "))
 
