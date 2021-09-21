@@ -34,7 +34,9 @@ ventanain.config(bd=40, bg="#8A8A8A")
               messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
 
                 
-  
+  #dasdfiojsa0iojfd kokisdfokwajkrfaaaaaaaaaaaaaaaaaaaaaaaakdaosdpsap'0do a¿od'SVIDO'0PASO¿CDP0AS´'0CD'P´0SADCsp'0cipjsdodfjISJDFIO´0SDÓSAJDJISDFJIO´SDIFOSEDSDOIPJSAPODFPO+IKOI  PO´PIK´PIKRFGKPOFKSDOKFPIKP´SDFKP+OSKPKF+ÁOS
+  dedkawpk
+  dwkadp'
 
   def entidades():
     ventana.withdraw()
