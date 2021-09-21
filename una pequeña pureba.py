@@ -16,8 +16,6 @@ etiquetabienvenidos.pack()
 ####
 usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 90_000], ["admin", "clave", "parqueadero", 960_000],[" "," "," "," "]]
 
-
-
 def login():
 
   ventanain.withdraw()
