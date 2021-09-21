@@ -11,22 +11,7 @@ ventanain.title("CAJERO EAN")
 ventanain.geometry('600x500')
 ventanain.config(bd=40, bg="#8A8A8A")
 
-etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
-etiquetabienvenidos.pack()
-####
-usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 90_000], ["admin", "clave", "parqueadero", 960_000],[" "," "," "," "]]
 
-def login():
-
-  ventanain.withdraw()
-  ventana = tk.Tk()
-  ventana.title("log in")
-  ventana.geometry("700x600")
-  ventana.config(bd=40, bg="#8A8A8A")
-  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
-  loginto.pack(pady=20)
-
-  #
   usuarioc = tk.Label(ventana, text="Usuario:", bg="#60A420", fg="black")
   usuarioc.pack(pady=3, side=tk.TOP)
   entrada1 = tk.Entry(ventana)
