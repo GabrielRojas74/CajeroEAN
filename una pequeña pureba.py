@@ -49,12 +49,7 @@ def login():
               messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
 
                 
-  boton3 = tk.Button(ventana, text="validar clave", command=validar)
-  boton3.pack(pady=20)
-
-  loginto3 = Label(ventana, text="En caso de no tener un usuario comuniquese con el administrador (018000 admin)", font=(
-      "arial", 11,  BOLD), bg="#E36421", fg="black", width="90", height=2, bd=8, relief=RAISED)
-  loginto3.pack(pady=80)
+  
 
   def entidades():
     ventana.withdraw()
