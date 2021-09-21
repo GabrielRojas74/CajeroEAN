@@ -9,10 +9,11 @@ import random
 ventanain = Tk()
 ventanain.title("CAJERO EAN")
 ventanain.geometry('600x500')
-ventanain.config(bd=40, bg="#8A8A8A")
+ventanain.config(bd=40, bg="white")
 
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
+
 ####
 usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 90_000], ["admin", "clave", "parqueadero", 960_000],[" "," "," "," "]]
 
