@@ -4,6 +4,7 @@ Proyecto Final del curso de Algoritmos y programación.
 
 Para poder desarrollar este algoritmo se hizo uso de la herramienta Tkinter que es  binding de la biblioteca gráfica de python.
 esta se utiliza para proporcionar una entrada y una salida de manera gráfica al algoritmo.
+![descarga](https://user-images.githubusercontent.com/87994869/134280563-a757615e-85b0-456f-b0ba-a31dce5780b0.jpg)
 
 El algoritmo de CajeroEan tiene como finalidad 
 Darle soporte a Banco Ean,
@@ -26,17 +27,12 @@ Y en cuanto al ParqueaderoEan también se puede:
 
 A la hora de su comprobación y utilización del programa, gracias a la ayuda de la herramienta tkinter
 El programa se puede manifestar graficamente de la siguiente manera
-
-![image](https://user-images.githubusercontent.com/87994869/133958611-bd740d17-ea16-4ffd-959a-144aa3ca6302.png)
-![image](https://user-images.githubusercontent.com/87994869/133963758-e141c11e-f4cd-462b-b15c-f2919027d676.png)
-![image](https://user-images.githubusercontent.com/87994869/134027718-0d0b56ca-0716-421e-b7ad-aff7f1072f1b.png)
-![image](https://user-images.githubusercontent.com/87994869/134036184-08da28ee-8ee9-411d-8f2b-16e816c200b9.png)
-![image](https://user-images.githubusercontent.com/87994869/134036432-fecf97c7-7187-49b7-952f-3d417562c120.png)
-![image](https://user-images.githubusercontent.com/87994869/134038019-f296436f-76aa-4e64-a215-c75bbab7fedb.png)
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/87994869/134280507-cdbc1192-ef26-44d1-a6f9-7e24b853fac1.png)
+![image](https://user-images.githubusercontent.com/87994869/134280584-d24347a9-1ffe-4928-a844-d76fae890cf5.png)
+![image](https://user-images.githubusercontent.com/87994869/134280611-6d9bb9ed-b3a3-492c-968d-303e36866d20.png)
+![image](https://user-images.githubusercontent.com/87994869/134280642-410c1dcb-e61f-4739-bfb6-b5e91aaab64a.png)
+![image](https://user-images.githubusercontent.com/87994869/134280659-6a5a33c3-a77b-4e97-b35d-e9560012928a.png)
+![image](https://user-images.githubusercontent.com/87994869/134280710-3985cde4-8ae0-41a8-8ae0-2bb8c6798814.png)
+![image](https://user-images.githubusercontent.com/87994869/134280745-1eb90609-1683-4542-82ef-61ac21649721.png)
 
 
