@@ -4,7 +4,7 @@ from tkinter import ttk
 from tkinter import messagebox
 import tkinter
 from tkinter.font import BOLD, ITALIC
-import random
+
 
 ventanain = Tk()
 ventanain.title("CAJERO EAN")
