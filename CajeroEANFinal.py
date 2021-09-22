@@ -9,13 +9,18 @@ import random
 ventanain = Tk()
 ventanain.title("CAJERO EAN")
 ventanain.geometry('600x500')
-ventanain.config(bd=40, bg="#8A8A8A")
-
-etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=("ARIAL", 30), bg="#60A420", fg="#223499", width="60", height=6, bd=4, relief=RAISED)
+ventanain.config(bd=40, bg="#f0f0f0")
+ean = PhotoImage(
+    file="c:\\Users\\gabor\\Desktop\\GitHub\\CajeroEAN\\eanlen.gif")
+lbl = Label(ventanain, image=ean)
+lbl.pack(pady=20)
+etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
+    "titillium", 30), bg="#3bac53", fg="black", width="60", height=3, bd=4, relief=RAISED)
 etiquetabienvenidos.pack()
-####
-usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213", "banco", 90_000], ["admin", "clave", "parqueadero", 960_000],[" "," "," "," "]]
 
+
+usuarios = [["gabriel", "1234", "restaurante", 10_000_000], ["ivan", "1213",
+                                                             "banco", 90_000], ["admin", "clave", "parqueadero", 960_000], [" ", " ", " ", " "]]
 
 
 def login():
@@ -24,50 +29,100 @@ def login():
   ventana = tk.Tk()
   ventana.title("log in")
   ventana.geometry("700x600")
-  ventana.config(bd=40, bg="#8A8A8A")
-  loginto = Label(ventana, text="ingrese usuario y contraseña", font=("Bahnschrift SemiBold Condensed",25, ITALIC, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+  ventana.config(bd=40, bg="#f0f0f0")
+  loginto = Label(ventana, text="Ingrese usuario y contraseña", font=(
+      "titillium", 25, BOLD), bg="#3bac53", fg="black", width=40, height=2, bd=8, relief=RAISED)
   loginto.pack(pady=20)
 
   #
-  usuarioc = tk.Label(ventana, text="Usuario:", bg="#60A420", fg="black")
+  usuarioc = tk.Label(ventana, text="Usuario", font=(
+      "titillium", 17, BOLD), bg="#3bac53", fg="black")
   usuarioc.pack(pady=3, side=tk.TOP)
-  entrada1 = tk.Entry(ventana)
+  entrada1 = tk.Entry(ventana, font=("titillium", 17, BOLD))
   entrada1.pack(pady=7)
-  clavec = tk.Label(ventana, text="Clave:", bg="#60A420", fg="black")
+  clavec = tk.Label(ventana, text="Contraseña", font=(
+      "titillium", 17, BOLD), bg="#3bac53", fg="black")
   clavec.pack(pady=3, side=tk.TOP)
-  entrada2 = tk.Entry(ventana)
+  entrada2 = tk.Entry(ventana, font=("titillium", 17, BOLD))
   entrada2.pack(pady=7)
 
-  #
-  lista=[]
+  def abrirventana2():
+    ventana.withdraw()
+    win = tk.Toplevel()
+    win.geometry("600x600")
+    win.title("Crear usuario")
+    win.configure(bd=40, bg="#f0f0f0")
+    loginto1 = Label(win, text="Complete los datos", font=(
+        "titillium", 25, BOLD), bg="#3bac53", fg="black", width=35, height=2, bd=6, relief=RAISED)
+    loginto1.pack(pady=20)
+
+    usuarionuevo = tk.Label(win, text="Usuario", font=(
+        "titillium", 16), bg="#3bac53", fg="black")
+    usuarionuevo.pack(pady=3, side=tk.TOP)
+    entradanu = tk.Entry(win, font=("titillium", 15, BOLD))
+    entradanu.pack(pady=7)
+    #
+    clavenu = tk.Label(win, text="Contraseña", font=(
+        "titillium", 16), bg="#3bac53", fg="black")
+    clavenu.pack(pady=3, side=tk.TOP)
+    entradanud = tk.Entry(win, font=("titillium", 15, BOLD))
+    entradanud.pack(pady=7)
+    #
+    enti = tk.Label(win, text="Entidad", font=(
+        "titillium", 16), bg="#3bac53", fg="black")
+    enti.pack(pady=3, side=tk.TOP)
+    entradant = tk.Entry(win, font=("titillium", 15, BOLD))
+    entradant.pack(pady=7)
+    #
+    cantidad = tk.Label(win, text="Cantidad de dinero (Banco)", font=(
+        "titillium", 16), bg="#3bac53", fg="black")
+    cantidad.pack(pady=3, side=tk.TOP)
+    entradanc = tk.Entry(win, font=("titillium", 15, BOLD))
+    entradanc.pack(pady=7)
+
+    def guardar():
+      liste = []
+      liste.append(str(entradanu.get()))
+      liste.append(str(entradanud.get()))
+      liste.append(str(entradant.get()))
+      liste.append(int(entradanc.get()))
+      usuarios.append(liste)
+      messagebox.showinfo("Registro", "Usuario registrado exitosamente")
+      win.destroy()
+      login()
+    boton2 = tk.Button(win, text="crear",  cursor="hand2",  font=(
+        "titillium", 15, BOLD), fg="black", bg="grey", command=guardar)
+    boton2.pack()
+    #
+  lista = []
+
   def validar():
-        for a in range(0, 4):
+      for a in range(0, 5):
           if (usuarios[a][0] == entrada1.get() and usuarios[a][1] == entrada2.get()):
             entidades()
             lista.append(usuarios[a][0])
             lista.append(usuarios[a][1])
             break
           else:
-              messagebox.showwarning("intente de nuevo", "usuario o contraseña no validos")
+              messagebox.showwarning(
+                  "intente de nuevo", "usuario o contraseña no validos")
 
-                
-  boton3 = tk.Button(ventana, text="validar clave", command=validar)
+  boton3 = tk.Button(ventana, text="validar clave", cursor="hand2", font=(
+      "titillium", 18), fg="black", bg="grey", command=validar)
   boton3.pack(pady=20)
-
-  loginto3 = Label(ventana, text="En caso de no tener un usuario comuniquese con el administrador (018000 admin)", font=(
-      "arial", 11,  BOLD), bg="#E36421", fg="black", width="90", height=2, bd=8, relief=RAISED)
-  loginto3.pack(pady=80)
+  botoncrear = tk.Button(ventana, text="Crear usuario", cursor="hand2",  font=(
+      "titillium", 18), fg="black", bg="grey", command=abrirventana2)
+  botoncrear.pack(pady=10)
 
   def entidades():
     ventana.withdraw()
     entidades = tk.Toplevel()
     entidades.geometry("600x500")
     entidades.title("Entidades")
-    entidades.config(bd=40, bg="#8A8A8A")
-    loginto2 = Label(entidades, text="Seleccione su entidad", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="#60A420", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+    entidades.config(bd=40, bg="#f0f0f0")
+    loginto2 = Label(entidades, text="Seleccione su entidad",  font=(
+        "titillium", 20, BOLD), bg="#3bac53", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
     loginto2.pack(pady=20)
-    
-    
     def banco():
       entidades.withdraw()
       banco = tk.Toplevel()
@@ -81,7 +136,7 @@ def login():
           cantidad.geometry("300x300")
           cantidad.title("cantidad")
           cantidad.configure(bd=40, bg="orange")
-          dinerocaja = Label(cantidad, text="Su saldo actual es de: ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="lightgreen", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocaja = Label(cantidad, text="Su saldo actual es de: ", font=("Bahnschrift SemiBold Condensed", 16, BOLD), bg="lightgreen", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocaja.pack(pady=25)
           print(lista)
           for a in range(0, len(usuarios)):
@@ -125,7 +180,7 @@ def login():
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  dineroc = Label(bancop,text=str(usuarios[a][3])) 
+                  dineroc = Label(bancop, text=str(usuarios[a][3]), font=("Bahnschrift SemiBold Condensed", 16))
                   dineroc.pack(pady=25)
                   dinero_de_caja = int(usuarios[a][3]) 
 
@@ -188,10 +243,10 @@ def login():
       Parqueadero.title("Parqueadero EAN")
       Parqueadero.configure(bd=40, bg="#FFF8DC")
 
-      opciones = Label(Parqueadero, text="Digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed", 25, BOLD), bg="orange", fg="#00FFFF", width="40", height=2, bd=8, relief=RAISED)
+      opciones = Label(Parqueadero, text="Digite el la cantidad que hay en la caja", font=("Bahnschrift SemiBold Condensed", 25, BOLD), bg="orange", fg="black", width="40", height=2, bd=8, relief=RAISED)
       opciones.pack(pady=25)
 
-      entrada3 = tk.Entry(Parqueadero)
+      entrada3 = tk.Entry(Parqueadero, font=("Bahnschrift SemiBold Condensed", 17))
       entrada3.pack()
 
       def opcionespar():
@@ -206,9 +261,9 @@ def login():
           cantidad.geometry("300x300")
           cantidad.title("cantidad")
           cantidad.configure(bd=40, bg="#765048")
-          dinerocaja = Label(cantidad, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocaja = Label(cantidad, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 18, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocaja.pack(pady=25)
-          dineroc = Label(cantidad,text=str(entrada3.get())) 
+          dineroc = Label(cantidad, text=str(entrada3.get()),font=("Bahnschrift SemiBold Condensed", 17))
           dineroc.pack(pady=25)
           dinero_de_caja = int(entrada3.get()) 
           
@@ -261,7 +316,8 @@ def login():
           vueltas.configure(bd=40, bg="#765048")
           dinerocaja = Label(vueltas, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 18, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocaja.pack(pady=25)
-          vueltass = Label(vueltas,text=int(entrada4.get())) 
+          vueltass = Label(vueltas, text=int(entrada4.get()),
+                           font=("Bahnschrift SemiBold Condensed", 17))
           vueltass.pack(pady=25)
           retiro= int(entrada4.get()) 
           dinero_de_caja = int(entrada3.get()) 
@@ -335,7 +391,8 @@ def login():
       opciones = Label(restaurante, text="Digite la cantidad de dinero que hay en la caja", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
       opciones.pack(pady=25)
 
-      entradas = tk.Entry(restaurante)
+      entradas = tk.Entry(restaurante,font=(
+          "Bahnschrift SemiBold Condensed", 16))
       entradas.pack()
 
       def opcionespares():
@@ -352,7 +409,7 @@ def login():
           cantidades.configure(bd=40, bg="#D4A373")
           dinerocajas = Label(cantidades, text="El dinero en caja es de", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
-          dineroca = Label(cantidades,text=str(entradas.get())) 
+          dineroca = Label(cantidades, text=str(entradas.get()),font=("Bahnschrift SemiBold Condensed", 16))
           dineroca.pack(pady=25)
           dinero_de_caja = int(entradas.get()) 
           if (dinero_de_caja >= 100_000):
@@ -405,7 +462,8 @@ def login():
           cambios.configure(bd=40, bg="#00B4D8")
           dinerocajas = Label(cambios, text="El dinero a dar es ", font=("Bahnschrift SemiBold Condensed", 20, BOLD), bg="orange", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
           dinerocajas.pack(pady=25)
-          cambioss = Label(cambios,text=str(entradass.get())) 
+          cambioss = Label(cambios, text=str(entradass.get()),
+                           font=("Bahnschrift SemiBold Condensed", 16))
           cambioss.pack(pady=25)
           retiro= int(entradass.get()) 
           dinero_de_caja = int(entradas.get()) 
@@ -466,16 +524,16 @@ def login():
       retiro = int(input("¿Cuanto desea retirar?: "))
 
       #
-    botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=banco)
+    botonbanco = tk.Button(entidades, text="Banco EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), fg="black",bg="grey", command=banco)
     botonbanco.pack(pady=10)
-    botonparque = tk.Button(entidades, text="Parqueadero EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=Parqueadero)
+    botonparque = tk.Button(entidades, text="Parqueadero EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), fg="black",bg="grey", command=Parqueadero)
     botonparque.pack(pady=10)
-    botonres = tk.Button(entidades, text="Restaurante EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=restaurante)
+    botonres = tk.Button(entidades, text="Restaurante EAN", cursor="hand2", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), fg="black",bg="grey", command=restaurante)
     botonres.pack(pady=10)
     #
 
 
-botonsig = Button(ventanain, text='Siguiente', cursor="hand2", font=("ARIAL", 15), fg="black", command=login)
+botonsig = Button(ventanain, text='Siguiente', cursor="hand2", font=("ARIAL", 15), fg="black",bg="grey", command=login)
 botonsig.pack(padx=20, pady=30)
 
 
