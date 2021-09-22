@@ -73,17 +73,27 @@ def login():
       banco = tk.Toplevel()
       banco.geometry("600x500")
       banco.title("Banco EAN")
-      banco.configure(bd=40, bg="#1586BF")
+      banco.configure(bd=40, bg="blue")
       
       
       def saldo():
-        print(lista)
-        for a in range(0, 4):
+          cantidad=tk.Toplevel()
+          cantidad.geometry("300x300")
+          cantidad.title("cantidad")
+          cantidad.configure(bd=40, bg="orange")
+          dinerocaja = Label(cantidad, text="Su saldo actual es de: ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="lightgreen", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+          dinerocaja.pack(pady=25)
+          print(lista)
+          for a in range(0, len(usuarios)):
             if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
-                  messagebox.showinfo("Tu saldo es: ",usuarios[a][3])
+                  
                   break
       
-      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
+          dineroc = Label(cantidad,font=("Bahnschrift SemiBold Condensed", 16),text=str(usuarios[a][3])) 
+          dineroc.pack(pady=25)
+          dinero_de_caja = int(usuarios[a][3]) 
+      
+      botoncon = tk.Button(banco, text="Consultar su saldo", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="yellow", fg="#271F26", width="40", height=2, bd=8, relief=RAISED,command=saldo)
       botoncon.pack(pady=10)
       
 
@@ -96,25 +106,35 @@ def login():
             bancop.configure(bd=40, bg="#765048")
             reti= Label(bancop, text="Digite el la cantidad que quiere retirar", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
             reti.pack(pady=25)
-            clavecd= tk.Label(bancop, text="Monto:", bg="#60A420", fg="black")
+            clavecd= tk.Label(bancop, text="Monto:", font=("Bahnschrift SemiBold Condensed",17), bg="orange", fg="black")
             clavecd.pack(pady=3, side=tk.TOP)
-            entrada200 = tk.Entry(bancop)
+            entrada200 = tk.Entry(bancop, font=("Bahnschrift SemiBold Condensed",15))
             
             entrada200.pack(pady=7)
             saldo=0
             def profe100():
-                  for a in range(0, 4):
+                  bancop=tk.Toplevel()
+                  bancop.geometry("300x300")
+                  bancop.title("Retiro exitoso")
+                  bancop.configure(bd=40, bg="pink")
+                  
+                  dinerocaja = Label(bancop, text="Su nuevo saldo es de: ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="red", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+                  dinerocaja.pack(pady=25)  
+                  for a in range(0, len(usuarios)):
                     if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  messagebox.showinfo("Retiro exitoso",saldo)
+                  dineroc = Label(bancop,text=str(usuarios[a][3])) 
+                  dineroc.pack(pady=25)
+                  dinero_de_caja = int(usuarios[a][3]) 
+
             boton2222= Button(bancop, text="Retirar ", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=profe100)
             boton2222.pack(padx=20, pady=30)
             
 
           
-      botonpar100 = Button(banco, text='retiro', font=("ARIAL", 15), fg="black", command=xfa100profe)
+      botonpar100 = Button(banco, text='Retiro', font=("ARIAL", 15), fg="black", command=xfa100profe)
       botonpar100.pack(padx=20, pady=30)
       
 
@@ -124,8 +144,8 @@ def login():
             bancoop = tk.Toplevel()
             bancoop.geometry("600x500")
             bancoop.title("Transferir EAN")
-            bancoop.configure(bd=40, bg="#765048")
-            reti= Label(bancoop, text="Digite el la cantidad que quiere transferir", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="purple", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
+            bancoop.configure(bd=40, bg="lightblue")
+            reti= Label(bancoop, text="Digite el la cantidad que quiere transferir", font=("Bahnschrift SemiBold Condensed",25, BOLD), bg="red", fg="#271F26", width="40", height=2, bd=8, relief=RAISED) 
             reti.pack(pady=25)
             entrada69 = tk.Label(bancoop, text="Usuario:", bg="#60A420", fg="black")
             entrada69.pack(pady=3, side=tk.TOP)
@@ -136,12 +156,22 @@ def login():
             entrada200 = tk.Entry(bancoop)
             entrada200.pack(pady=7)
             def retiro():
-                  for a in range(0, 4):
+                  bancop=tk.Toplevel()
+                  bancop.geometry("300x300")
+                  bancop.title("Transferencia exitosa")
+                  bancop.configure(bd=40, bg="Magenta")
+                  
+                  dinerocaja = Label(bancop, text="Su nuevo saldo es de: ", font=("Bahnschrift SemiBold Condensed", 15, BOLD), bg="Violet", fg="#271F26", width="40", height=2, bd=8, relief=RAISED)
+                  dinerocaja.pack(pady=25) 
+                  for a in range(0, len(usuarios)):
                         if (usuarios[a][0] == lista[0] and usuarios[a][1] == lista[1]):
                           usuarios[a][3]=usuarios[a][3]-int(entrada200.get())
                           saldo=usuarios[a][3]
                           break
-                  messagebox.showinfo("Transferencia exitosa",saldo)
+
+                  dineroc = Label(bancop,font=("Bahnschrift SemiBold Condensed", 16),text=str(usuarios[a][3])) 
+                  dineroc.pack(pady=25)
+                  dinero_de_caja = int(usuarios[a][3]) 
             boton2222= Button(bancoop, text="Transferir", font=("Bahnschrift SemiBold Condensed", 25, ITALIC, BOLD), command=retiro)
             boton2222.pack(padx=20, pady=30)
             
