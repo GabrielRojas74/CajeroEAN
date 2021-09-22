@@ -10,8 +10,7 @@ ventanain = Tk()
 ventanain.title("CAJERO EAN")
 ventanain.geometry('600x500')
 ventanain.config(bd=40, bg="#f0f0f0")
-ean = PhotoImage(
-    file="c:\\Users\\gabor\\Desktop\\GitHub\\CajeroEAN\\eanlen.gif")
+ean = PhotoImage(file="c:\\Users\\gabor\\Desktop\\GitHub\\CajeroEAN\\eanlen.gif")
 lbl = Label(ventanain, image=ean)
 lbl.pack(pady=20)
 etiquetabienvenidos = Label(ventanain, text="Bienvenido al Cajero EAN", font=(
